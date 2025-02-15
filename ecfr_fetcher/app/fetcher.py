@@ -2,7 +2,7 @@ import httpx
 from datetime import datetime
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from . import models
+from models import models
 import json
 
 class ECFRFetcher:
@@ -17,6 +17,20 @@ class ECFRFetcher:
     async def fetch_titles(self) -> dict:
         response = await self.client.get(f"{self.base_url}/versioner/v1/titles.json")
         return response.json()
+    
+    async def fetch_title_versions(self, title_number: int) -> dict:
+        """Fetch versions for a specific title"""
+        response = await self.client.get( f"{self.base_url}/versioner/v1/versions/title-{title_number}.json")
+        if response.status_code == 404:
+            return {"content_versions": []}
+        return response.json()
+    
+    async def fetch_full_title(self, title_number: int, version_date: str) -> dict:
+        """Fetch the full title given the title number and version date"""
+        response = await self.client.get(f"{self.base_url}/versioner/v1/full/{version_date}/title-{title_number}.xml")
+        if response.status_code == 404:
+            return {"title": {}}
+        return response.text
     
     async def close(self):
         await self.client.aclose()
@@ -53,3 +67,27 @@ class DataProcessor:
             self.session.add(title)
         
         await self.session.commit()
+
+    async def process_title_versions(self, title_number: int, versions_data: dict):
+        """Process and store title versions"""
+        for version in versions_data.get("content_versions", []):
+            title_version = models.TitleVersion(
+                title_number=title_number,
+                version_date=datetime.strptime(version["date"], "%Y-%m-%d").date(),
+                amendment_date=datetime.strptime(version["amendment_date"], "%Y-%m-%d").date(),
+                issue_date=datetime.strptime(version["issue_date"], "%Y-%m-%d").date(),
+                identifier=version["identifier"],
+                name=version["name"],
+                part=version["part"],
+                substantive=version["substantive"],
+                removed=version["removed"],
+                subpart=version.get("subpart"),  # Some might not have subpart
+                type=version["type"]
+            )
+            self.session.add(title_version)
+        
+        try:
+            await self.session.commit()
+        except Exception as e:
+            await self.session.rollback()
+            raise e

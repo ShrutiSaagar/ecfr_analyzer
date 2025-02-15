@@ -1,0 +1,455 @@
+{
+    "1": {
+        "chapter": [
+            "III",
+            "IV",
+            "I",
+            "VI"
+        ],
+        "part": [
+            "500",
+            "426",
+            "457",
+            "425"
+        ]
+    },
+    "36": {
+        "chapter": [
+            "VIII",
+            "IV",
+            "XI",
+            "VII",
+            "XVI",
+            "XII",
+            "XV",
+            "IX",
+            "X",
+            "V"
+        ]
+    },
+    "5": {
+        "chapter": [
+            "LXXXIII",
+            "LXXIII",
+            "IX",
+            "XI",
+            "LXVIII",
+            "XLI",
+            "LXXXIV",
+            "LXXI",
+            "XCVIII",
+            "LXX",
+            "XXVI",
+            "IV",
+            "C",
+            "LIII",
+            "XXIII",
+            "LIV",
+            "LXII",
+            "LII",
+            "XXXI",
+            "XXX",
+            "XXIX",
+            "XXII",
+            "XXXVII",
+            "LXXX",
+            "XLIX",
+            "CIII",
+            "LXXIV",
+            "VI",
+            "LXXVI",
+            "XLVII",
+            "LVII",
+            "XVI",
+            "XLV",
+            "XXXVI",
+            "LXV",
+            "LXIII",
+            "XXV",
+            "XXXIII",
+            "V",
+            "XL",
+            "XXVIII",
+            "XLII",
+            "III",
+            "LXXVII",
+            "II",
+            "LXIV",
+            "XCIX",
+            "LIX",
+            "LXVI",
+            "LXXXVI",
+            "LXI",
+            "CI",
+            "XLIII",
+            "XLVIII",
+            "I",
+            "XXXV",
+            "XLVI",
+            "LX",
+            "XXXIV",
+            "VIII",
+            "CII",
+            "LXIX",
+            "L",
+            "XXI"
+        ]
+    },
+    "22": {
+        "chapter": [
+            "XV",
+            "V",
+            "XIV",
+            "IX",
+            "XVII",
+            "X",
+            "XI",
+            "XII",
+            "VII",
+            "II",
+            "IV",
+            "XVI",
+            "XIII",
+            "III",
+            "I"
+        ],
+        "subchapter": [
+            "B",
+            "D",
+            "C"
+        ]
+    },
+    "48": {
+        "chapter": [
+            "57",
+            "19",
+            "4",
+            "13",
+            "9",
+            "15",
+            "1",
+            "5",
+            "3",
+            "24",
+            "14",
+            "7",
+            "28",
+            "29",
+            "99",
+            "18",
+            "25",
+            "20",
+            "16",
+            "17",
+            "21",
+            "23",
+            "6",
+            "12",
+            "10",
+            "8"
+        ]
+    },
+    "2": {
+        "chapter": [
+            "IV",
+            "XIII",
+            "XI",
+            "XXXIV",
+            "LVIII",
+            "IX",
+            "XV",
+            "XXXV",
+            "LX",
+            "LIX",
+            "III",
+            "XXX",
+            "XXIV",
+            "XIV",
+            "XVI",
+            "VII",
+            "XXVIII",
+            "XXIX",
+            "XVIII",
+            "XXII",
+            "XXVI",
+            "XXXVI",
+            "XXV",
+            "XX",
+            "XXXVII",
+            "XXVII",
+            "XXIII",
+            "VI",
+            "XII",
+            "X",
+            "VIII"
+        ],
+        "subtitle": [
+            "A"
+        ]
+    },
+    "7": {
+        "chapter": [
+            "XVI",
+            "XX"
+        ]
+    },
+    "14": {
+        "chapter": [
+            "VI",
+            "V"
+        ]
+    },
+    "45": {
+        "chapter": [
+            "XXIII",
+            "VII",
+            "IX",
+            "XXI",
+            "XVIII",
+            "XXIV",
+            "XVI",
+            "XVII",
+            "XII",
+            "XXV",
+            "XI",
+            "VI",
+            "VIII"
+        ],
+        "subtitle": [
+            "A"
+        ]
+    },
+    "38": {
+        "chapter": [
+            "II",
+            "I"
+        ]
+    },
+    "41": {
+        "chapter": [
+            "51",
+            "109",
+            "115",
+            "201",
+            "105",
+            "114",
+            "128",
+            "50"
+        ],
+        "subtitle": [
+            "D",
+            "A",
+            "C",
+            "F"
+        ]
+    },
+    "32": {
+        "chapter": [
+            "XIX",
+            "XVII",
+            "XXVII",
+            "XVIII",
+            "XVI",
+            "XXVIII"
+        ],
+        "subtitle": [
+            "A"
+        ]
+    },
+    "40": {
+        "chapter": [
+            "VI",
+            "VII",
+            "I",
+            "IV",
+            "IX",
+            "VIII"
+        ]
+    },
+    "44": {
+        "chapter": [
+            "IV"
+        ]
+    },
+    "17": {
+        "chapter": [
+            "I",
+            "II",
+            "IV"
+        ]
+    },
+    "29": {
+        "chapter": [
+            "IX",
+            "XIV",
+            "XII",
+            "XXVII",
+            "I",
+            "X",
+            "III",
+            "XX",
+            "XL"
+        ]
+    },
+    "12": {
+        "chapter": [
+            "X",
+            "IV",
+            "VI",
+            "XIV",
+            "III",
+            "XI",
+            "VIII",
+            "XII",
+            "II",
+            "XIII",
+            "VII",
+            "XV"
+        ]
+    },
+    "16": {
+        "chapter": [
+            "II",
+            "I"
+        ]
+    },
+    "28": {
+        "chapter": [
+            "VIII",
+            "VII",
+            "I",
+            "XI",
+            "IX"
+        ]
+    },
+    "10": {
+        "chapter": [
+            "XVII",
+            "II",
+            "III",
+            "X",
+            "XVIII",
+            "I",
+            "XIII"
+        ]
+    },
+    "18": {
+        "chapter": [
+            "III",
+            "VIII",
+            "XIII",
+            "VI"
+        ]
+    },
+    "34": {
+        "chapter": [
+            "XII"
+        ]
+    },
+    "15": {
+        "chapter": [
+            "XIII",
+            "XX"
+        ]
+    },
+    "11": {
+        "chapter": [
+            "II",
+            "I"
+        ]
+    },
+    "13": {
+        "chapter": [
+            "V",
+            "IV",
+            "I"
+        ]
+    },
+    "20": {
+        "chapter": [
+            "VIII",
+            "II",
+            "III"
+        ]
+    },
+    "3": {
+        "chapter": [
+            "I"
+        ]
+    },
+    "47": {
+        "chapter": [
+            "I",
+            "V"
+        ]
+    },
+    "25": {
+        "chapter": [
+            "IV"
+        ]
+    },
+    "46": {
+        "chapter": [
+            "IV"
+        ]
+    },
+    "4": {
+        "chapter": [
+            "I"
+        ]
+    },
+    "8": {
+        "chapter": [
+            "I"
+        ]
+    },
+    "24": {
+        "chapter": [
+            "XV",
+            "XXV"
+        ]
+    },
+    "19": {
+        "chapter": [
+            "II"
+        ]
+    },
+    "31": {
+        "chapter": [
+            "IX"
+        ]
+    },
+    "50": {
+        "chapter": [
+            "V"
+        ]
+    },
+    "21": {
+        "chapter": [
+            "III"
+        ]
+    },
+    "49": {
+        "chapter": [
+            "VII",
+            "VIII",
+            "X"
+        ]
+    },
+    "39": {
+        "chapter": [
+            "III",
+            "I"
+        ]
+    },
+    "6": {
+        "chapter": [
+            "X"
+        ]
+    },
+    "43": {
+        "chapter": [
+            "III"
+        ]
+    }
+}

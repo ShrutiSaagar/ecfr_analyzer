@@ -1,0 +1,11 @@
+aiohttp==3.11.12
+
+httpx==0.28.1
+nltk==3.9.1
+processor==0.10.0
+pydantic==2.7.2
+pydantic_settings==2.7.1
+python-dotenv==1.0.1
+SQLAlchemy==2.0.23
+psycopg2-binary==2.9.9
+asyncpg==0.29.0
