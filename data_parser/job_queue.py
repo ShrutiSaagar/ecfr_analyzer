@@ -34,7 +34,7 @@ class DataProcessor:
         try:
             # 1. Fetch all TitleVersions
             agencies = await self.fetch_agencies()
-            print('agencies')
+            # print('agencies')
             # print(agencies)
             titles_set = set()
             for agency in agencies:
@@ -46,7 +46,8 @@ class DataProcessor:
                         # print('doc')
                         # print(doc)
                         title = doc.get("title")
-                        titles_set.add(title)
+                        if title in {7, 50, 12, 47, 49, 21, 48}:
+                            titles_set.add(title)
                         chapter = doc.get("chapter")
                         logging.info(f"Title: {title}, Chapter: {chapter}")
                 except json.JSONDecodeError as e:
@@ -54,16 +55,21 @@ class DataProcessor:
 
             title_versions = []
             for title in titles_set:
-                title_version = await self.session.execute(
-                    select(TitleVersion).filter(TitleVersion.title_number == title).order_by(TitleVersion.version_date.desc()).limit(1)
+                title_versions_query = await self.session.execute(
+                    select(TitleVersion).filter(TitleVersion.title_number == title).order_by(TitleVersion.version_date.desc())
                 )
-                title_version = title_version.scalar_one_or_none()
-                if title_version:
-                    title_versions.append(title_version)
+                title_versions_for_title = title_versions_query.scalars().all()
+                title_versions.extend(title_versions_for_title)
+                # title_version = await self.session.execute(
+                #     select(TitleVersion).filter(TitleVersion.title_number == title).order_by(TitleVersion.version_date.desc()).limit(1)
+                # )
+                # title_version = title_version.scalar_one_or_none()
+                # if title_version:
+                #     title_versions.append(title_version)
             
             jobs_created = 0
             
-            for tv in title_versions:
+            for i, tv in enumerate(title_versions):
                 # 2. Check if a VersionProcessingJobs record already exists
                 existing_job = await self.session.execute(
                     select(VersionProcessingJobs).filter_by(
@@ -80,9 +86,13 @@ class DataProcessor:
                         version_date=tv.version_date
                     )
                     self.session.add(new_job)
-                if(jobs_created == 60):
-                    break
+                    jobs_created += 1
 
+                # Commit every 100 records
+                if jobs_created % 100 == 0:
+                    await self.session.commit()
+
+            # Final commit for any remaining records
             await self.session.commit()
             logging.info(f"Created {jobs_created} VersionProcessingJobs entries.")
 

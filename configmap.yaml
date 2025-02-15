@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: job-processor-config
+  namespace: ecfr-analyzer
+data:
+  aws_region: "us-east-1"
+  AWS_DEFAULT_REGION: "us-east-1"  # Replace with your AWS region
+  LOG_LEVEL: "INFO"
+  ECFR_BASE_URL: "https://www.ecfr.gov/api"
+  # Add other non-sensitive configuration here
+

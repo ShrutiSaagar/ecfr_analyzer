@@ -6,6 +6,7 @@ import json
 import cProfile
 import pstats # For analyzing profile output
 import io # For capturing profile output to string
+import traceback
 
 from sqlalchemy import select, update, func, text
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
@@ -121,7 +122,7 @@ class JobProcessor:
         async with self.async_session_factory() as session:
             # async with session.begin(): # Use begin() for transaction management
             try:
-                logging.info(f"Job ID: {job_id} COMPLETED successfully.")
+                logging.info(f"Job ID: {job_id} picked up.")
                 fetcher = ECFRFetcher(settings.ECFR_BASE_URL)
                 xml_resp = await fetcher.fetch_full_title(job.title_number, job.version_date)
                 self.processor.set_xml_content(xml_resp)
@@ -145,10 +146,11 @@ class JobProcessor:
                 logging.info(f"Job ID: {job_id} processed and marked COMPLETED successfully.") # Log AFTER successful completion
 
             except Exception as e:
+                traceback.print_exc()
                 logging.error(f"Error processing job ID: {job_id}: {e}")
                 await self._update_job_status(session, job_id, 'FAILED', str(e)) # Update status to FAILED in DB
                 await session.rollback() # Rollback transaction on error during processing! 
-                logging.warning(f"Transaction rolled back for job ID {job_id} due to error.")
+                logging.warning(f"Transaction rolled back for job ID {job_id} due to error: {e}")
 
     async def _save_word_counts(self, session: AsyncSession, title: int, job_id: int, version_date: str, word_counts: dict):
         """
@@ -209,11 +211,11 @@ class JobProcessor:
         """
         logging.info(f"Job processor started.")
         while True:
-            jobs = await self.fetch_jobs() # Fetch a batch of jobs
+            jobs = await self.fetch_jobs(20) # Fetch a batch of jobs
             if jobs:
                 for job in jobs:
                     await self.process_job(job)
-                    await asyncio.sleep(0.25)
+                    await asyncio.sleep(0.3)
             else:
                 await asyncio.sleep(2) # Wait for 2 seconds if no jobs are found
 
@@ -234,7 +236,7 @@ async def main():
     """
     Main function to start the job processors.
     """
-    num_processors = 3 # Define number of parallel processors
+    num_processors = 5 # Define number of parallel processors
     await run_multiple_processors(num_processors)
     # processor = JobProcessor()
     # jobs = await processor.fetch_jobs() # Fetch a batch of jobs

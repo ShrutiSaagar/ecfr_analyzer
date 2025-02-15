@@ -171,3 +171,7 @@ cython_debug/
 .pypirc
 
 /xml
+/datafiles
+secret.yaml
+.DS_Store
+mainDockerfile
