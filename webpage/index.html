@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard for eCFR data - Agencies Word Counts Over the years</title>
+    <!-- <title>Dashboard to analyse how eCFR data linked to Agencies Word Counts Over Time</title> -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-array.v3.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v3.min.js"></script>
+    <style>
+
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-tab {
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tab:hover {
+            background-color: #f0f0f0;
+            color: #0056b3;
+        }
+
+        .nav-tab.active {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            max-width: 1800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+            color: #0056b3;
+            font-size: 24px;
+            display: flex; /* To align total words with title */
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Spacing between title and summary */
+        }
+
+        .controls {
+            flex: 0 0 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 12px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            height: fit-content;
+        }
+
+        .controls button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            align-self: flex-start;
+            font-size: 13px;
+        }
+
+        .controls button:hover {
+            background-color: #0056b3;
+        }
+
+        .filter-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-header {
+            font-weight: bold;
+            margin-bottom: 3px;
+            font-size: 14px;
+        }
+
+        .filter-input {
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 13px;
+        }
+
+        .filter-list {
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            font-size: 13px;
+        }
+
+        .filter-item {
+            padding: 6px 8px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+
+        .filter-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .filter-item.selected {
+            background-color: #e3f2fd;
+        }
+
+        .selected-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .selected-tag {
+            background-color: #e3f2fd;
+            border: 1px solid #90caf9;
+            border-radius: 12px;
+            padding: 3px 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .chart { font: 10px sans-serif; }
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: black;
+            shape-rendering: crispEdges;
+        }
+        .axis text {
+            font-family: sans-serif;
+            font-size: 11px;
+        }
+        .bar rect {
+            stroke: none;
+            fill-opacity: 0.8; /* Optional: for visual clarity */
+        }
+        .legend {
+            font-size: 11px;
+            font-family: sans-serif;
+        }
+        .selector {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .selected-options {
+            font-family: sans-serif;
+            font-size: 12px;
+            margin-bottom: 10px;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        .selected-options span {
+            display: inline-block;
+            background-color: #e0e0e0;
+            padding: 5px;
+            margin: 2px;
+            border-radius: 3px;
+        }
+        .selected-options span .remove {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .selectors-container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .selectors-container label {
+            margin-right: 10px;
+        }
+        .selectors-container select {
+            padding: 5px;
+            font-size: 12px;
+        }
+        .selectors-container button {
+            padding: 5px 10px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .charts-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .chart-container {
+            flex: 1;
+            min-width: 400px;
+        }
+        .multi-select {
+            position: relative;
+            display: inline-block;
+        }
+        .multi-select select {
+            display: none; /* Hide the default select element */
+        }
+        .select-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #ccc;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .select-box:after {
+            content: '\25BC'; /* Down arrow */
+            margin-left: 10px;
+        }
+        .checkboxes {
+            display: none;
+            border: 1px solid #ccc;
+            position: absolute;
+            background-color: white;
+            z-index: 1;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .checkboxes label {
+            display: block;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .checkboxes label:hover {
+            background-color: #f0f0f0;
+        }
+        .search-box {
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 5px;
+            border: none;
+            outline: none;
+        }
+        .note {
+            font-family: sans-serif;
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+
+        .agency-help {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-family: sans-serif;
+            font-size: 12px;
+            height: 100%;
+            width: 45%;
+        }
+
+        .agency-help h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .agency-help .search-box {
+            margin-bottom: 10px;
+        }
+
+        .agency-help .search-box input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box; /* To include padding in width */
+        }
+
+        .agency-help .agency-list {
+            max-height: 200px; /* Adjust as needed */
+            overflow-y: scroll;
+            width: 100%;
+        }
+
+        .agency-help .agency-item {
+            padding: 5px;
+            border-bottom: 1px dotted #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .agency-help .agency-item:last-child {
+            border-bottom: none;
+        }
+
+        .agency-help .agency-short-name {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .agency-help .agency-full-name {
+            color: #777;
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        #total-words-summary-h1 {
+            font-size: 16px; /* Adjust as needed */
+            color: #777; /* Muted color */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Dashboard for eCFR data - Agencies Word Counts Over the years</h1>
+
+<div class="nav-container">
+    <div class="nav-tabs">
+        <a href="index.html" class="nav-tab active">Overview</a>
+        <a href="agency_word_freq.html" class="nav-tab">Detailed Analysis</a>
+        <!-- You can add more tabs if needed -->
+    </div>
+</div>
+<div class="controls" >
+    <div ><b>Note:</b> Only the top 30 agencies by word count are selected by default.</div>
+
+    <div class="selected-options" id="selected-agencies"></div>
+    <div class="selected-options" id="selected-years"></div>
+    <div class="selectors-container" class="controls">
+        <div class="multi-select">
+            <!-- <label for="agency-select">Select Agencies:</label> -->
+            <div class="select-box" onclick="showCheckboxes('agency-checkboxes')">
+                <span>Select Agencies</span>
+            </div>
+            <div class="checkboxes" id="agency-checkboxes">
+                <div class="search-box">
+                    <input type="text" id="agency-search" placeholder="Search agencies..." onkeyup="filterOptions('agency-checkboxes', 'agency-search')">
+                </div>
+                <!-- Options will be populated here -->
+            </div>
+            <select id="agency-select" multiple></select>
+        </div>
+        <div class="multi-select">
+            <!-- <label for="year-select">Select Years:</label> -->
+            <div class="select-box" onclick="showCheckboxes('year-checkboxes')">
+                <span>Select Years</span>
+            </div>
+            <div class="checkboxes" id="year-checkboxes">
+                <div class="search-box">
+                    <input type="text" id="year-search" placeholder="Search years..." onkeyup="filterOptions('year-checkboxes', 'year-search')">
+                </div>
+                <!-- Options will be populated here -->
+            </div>
+            <select id="year-select" multiple></select>
+        </div>
+        <button id="update-button">Update Charts</button>
+        <button id="reset-default-button">Reset to Default</button>
+        <button id="remove-all-button">Remove All</button>
+    </div>
+</div>
+<div id="total-words-summary-h1"></div>
+<div class="charts-container">
+    <div class="chart-container" id="stacked-chart-container">
+        <h3>Stacked Bar Chart</h3>
+    </div>
+    <div class="chart-container" id="bar-chart-container">
+        <h3>Bar Chart</h3>
+    </div>
+</div>
+<div class="charts-container">
+    <div class="chart-container" id="line-chart-container">
+        <h3>Line Chart</h3>
+    </div>
+    <div class="agency-help">
+        <h3>Agency Name Helper/h3>
+        <div class="search-box">
+            <input type="text" id="agency-help-search" placeholder="Search agency names..." onkeyup="filterAgencyHelp()">
+        </div>
+        <div class="agency-list" id="agency-help-list">
+            <!-- Agency names will be populated here -->
+        </div>
+    </div>
+</div>
+<script>
+    const totalWordsSummaryH1Div = d3.select('#total-words-summary-h1');
+
+
+    const createTotalWordsSummaryChart = (data) => {
+        totalWordsSummaryH1Div.selectAll('*').remove();
+
+        if (!data || data.length === 0) {
+            totalWordsSummaryH1Div.text("No data available");
+            return;
+        }
+
+        const totalWords = d3.sum(data, agencyData => d3.sum(agencyData.top_words, word => word.frequency));
+
+        totalWordsSummaryH1Div.append('span')
+            .style('font-size', '0.8em')
+            .style('font-weight', 'bold')
+            .text(`(Total Words Analyzed: ${d3.format(".3s")(totalWords)})`);
+    };
+
+    const margin = {top: 20, right: 160, bottom: 50, left: 60}; // Increased right margin for legend
+    const width = 900 - margin.left - margin.right; // Wider chart
+    const height = 400 - margin.top - margin.bottom;
+    const svgStacked = d3.select("#stacked-chart-container").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const svgLine = d3.select("#line-chart-container").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const svgBar = d3.select("#bar-chart-container").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    d3.json("d3_stacked_data.json").then(function(data) {
+        const allAgencies = data[0].agencies.map(d => d.name);
+        const allYears = data.map(d => d.year).sort((a, b) => a - b);
+
+        // Select top 30 agencies by default
+        const top30Agencies = data[0].agencies.sort((a, b) => d3.sum(data, d => d.agencies.find(agency => agency.name === b.name)?.count || 0) - d3.sum(data, d => d.agencies.find(agency => agency.name === a.name)?.count || 0)).slice(0, 30).map(d => d.name);
+
+        const agencySelect = d3.select("#agency-select");
+        const agencyCheckboxes = d3.select("#agency-checkboxes");
+        const yearSelect = d3.select("#year-select");
+        const yearCheckboxes = d3.select("#year-checkboxes");
+
+
+        allAgencies.forEach(agency => {
+            const isChecked = top30Agencies.includes(agency);
+            agencySelect.append("option").text(agency).attr("value", agency).attr("selected", isChecked);
+            agencyCheckboxes.append("label")
+                .html(`<input type="checkbox" value="${agency}" ${isChecked ? 'checked' : ''} onchange="updateSelectedOptionsFromCheckboxes('agency-checkboxes', 'agency-select')"/> ${agency}`);
+        });
+
+        allYears.forEach(year => {
+            const isChecked = true; // Default to checked for all years
+            yearSelect.append("option").text(year).attr("value", year).attr("selected", isChecked);
+            yearCheckboxes.append("label")
+                .html(`<input type="checkbox" value="${year}" ${isChecked ? 'checked' : ''} onchange="updateSelectedOptionsFromCheckboxes('year-checkboxes', 'year-select')"/> ${year}`);
+        });
+
+        document.getElementById("update-button").addEventListener("click", () => {
+            const selectedAgencies = Array.from(agencySelect.node().selectedOptions).map(option => option.value);
+            const selectedYears = Array.from(yearSelect.node().selectedOptions).map(option => option.value);
+            updateCharts(data, selectedAgencies, selectedYears);
+            updateSelectedOptions(selectedAgencies, selectedYears);
+        });
+
+        document.getElementById("reset-default-button").addEventListener("click", () => {
+            // Reset Agency selections
+            agencyCheckboxes.selectAll('input[type="checkbox"]').property('checked', function(d) {
+                return top30Agencies.includes(this.value);
+            });
+            Array.from(agencySelect.node().options).forEach(option => {
+                option.selected = top30Agencies.includes(option.value);
+            });
+
+            // Reset Year selections
+            yearCheckboxes.selectAll('input[type="checkbox"]').property('checked', true);
+            Array.from(yearSelect.node().options).forEach(option => {
+                option.selected = true;
+            });
+
+            updateCharts(data, top30Agencies, allYears);
+            updateSelectedOptions(top30Agencies, allYears);
+        });
+
+        document.getElementById("remove-all-button").addEventListener("click", () => {
+            // Remove all Agency selections
+            agencyCheckboxes.selectAll('input[type="checkbox"]').property('checked', false);
+            Array.from(agencySelect.node().options).forEach(option => {
+                option.selected = false;
+            });
+
+            // Remove all Year selections
+            yearCheckboxes.selectAll('input[type="checkbox"]').property('checked', false);
+            Array.from(yearSelect.node().options).forEach(option => {
+                option.selected = false;
+            });
+
+            updateCharts(data, [], []); // Update charts with no selections
+            updateSelectedOptions([], []); // Clear selected options display
+        });
+
+
+        updateCharts(data, top30Agencies, allYears);
+        updateSelectedOptions(top30Agencies, allYears);
+    });
+
+    function showCheckboxes(id) {
+        const checkboxes = document.getElementById(id);
+        if (checkboxes.style.display === "block") {
+            checkboxes.style.display = "none";
+        } else {
+            checkboxes.style.display = "block";
+        }
+    }
+
+    function filterOptions(checkboxesId, searchId) {
+        const input = document.getElementById(searchId);
+        const filter = input.value.toLowerCase();
+        const checkboxes = document.getElementById(checkboxesId);
+        const labels = checkboxes.getElementsByTagName('label');
+        for (let i = 0; i < labels.length; i++) {
+            const label = labels[i];
+            const text = label.textContent || label.innerText;
+            if (text.toLowerCase().indexOf(filter) > -1) {
+                label.style.display = "";
+            } else {
+                label.style.display = "none";
+            }
+        }
+    }
+
+    function updateSelectedOptionsFromCheckboxes(checkboxesId, selectId) {
+        const checkboxes = document.getElementById(checkboxesId);
+        const select = document.getElementById(selectId);
+        const selectedValues = Array.from(checkboxes.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
+        Array.from(select.options).forEach(option => {
+            option.selected = selectedValues.includes(option.value);
+        });
+        updateSelectedOptions(
+            Array.from(document.getElementById('agency-select').selectedOptions).map(option => option.value),
+            Array.from(document.getElementById('year-select').selectedOptions).map(option => option.value)
+        );
+    }
+
+    function updateSelectedOptions(selectedAgencies, selectedYears) {
+        const selectedAgenciesDiv = d3.select("#selected-agencies");
+        selectedAgenciesDiv.html('');
+        selectedAgencies.forEach(agency => {
+            selectedAgenciesDiv.append('span')
+                .html(`${agency} <span class="remove" onclick="removeSelectedOption('agency-select', '${agency}')">&times;</span>`);
+        });
+
+        const selectedYearsDiv = d3.select("#selected-years");
+        selectedYearsDiv.html('');
+        selectedYears.forEach(year => {
+            selectedYearsDiv.append('span')
+                .html(`${year} <span class="remove" onclick="removeSelectedOption('year-select', '${year}')">&times;</span>`);
+        });
+    }
+
+    function removeSelectedOption(selectId, value) {
+        const select = document.getElementById(selectId);
+        Array.from(select.options).forEach(option => {
+            if (option.value === value) {
+                option.selected = false;
+            }
+        });
+        updateSelectedOptionsFromCheckboxes(
+            selectId === 'agency-select' ? 'agency-checkboxes' : 'year-checkboxes',
+            selectId
+        );
+    }
+
+    function updateCharts(data, selectedAgencies, selectedYears) {
+        const filteredData = data.filter(d => selectedYears.includes(d.year));
+        const color = d3.scaleOrdinal().domain(selectedAgencies).range(d3.schemeCategory10);
+
+        // Stacked Bar Chart
+        const xStacked = d3.scaleBand()
+            .domain(selectedYears)
+            .rangeRound([0, width])
+            .paddingInner(0.05)
+            .align(0.1);
+
+        const yStacked = d3.scaleLinear()
+            .domain([0, d3.max(filteredData, d => d3.sum(d.agencies.filter(a => selectedAgencies.includes(a.name)), agency => agency.count))]).nice()
+            .rangeRound([height, 0]);
+
+        const zStacked = d3.stack().keys(selectedAgencies)
+            .value((d, key) => {
+                const agencyData = d.agencies.find(a => a.name === key);
+                return agencyData ? agencyData.count : 0;
+            });
+
+        const seriesStacked = zStacked(filteredData);
+
+        svgStacked.selectAll("*").remove();
+
+        svgStacked.append("g")
+            .selectAll("g")
+            .data(seriesStacked)
+            .join("g")
+            .attr("fill", d => color(d.key))
+            .selectAll("rect")
+            .data(d => d)
+            .join("rect")
+            .attr("x", d => xStacked(d.data.year))
+            .attr("y", d => yStacked(d[1]))
+            .attr("height", d => yStacked(d[0]) - yStacked(d[1]))
+            .attr("width", xStacked.bandwidth());
+
+        svgStacked.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .attr("class", "axis")
+            .call(d3.axisBottom(xStacked));
+
+        svgStacked.append("g")
+            .attr("class", "axis")
+            .call(d3.axisLeft(yStacked).tickFormat(d3.format(".2s")));
+
+        svgStacked.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + margin.bottom - 10)
+            .attr("text-anchor", "middle")
+            .text("Years");
+
+        svgStacked.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -margin.left + 20)
+            .attr("text-anchor", "middle")
+            .text("Word Count");
+
+        // Stacked Bar Chart Legend
+        const legendStacked = svgStacked.selectAll(".legend")
+            .data(selectedAgencies)
+            .enter().append("g")
+            .attr("class", "legend")
+            .attr("transform", (d, i) => `translate(0,${height + margin.bottom + i * 20})`); // Position below the chart
+
+        legendStacked.append("rect")
+            .attr("x", 0) // Start from the left
+            .attr("width", 18)
+            .attr("height", 18)
+            .style("fill", color);
+
+        legendStacked.append("text")
+            .attr("x", 25) // Shift text to the right of the rectangle
+            .attr("y", 9)
+            .attr("dy", ".35em")
+            .style("text-anchor", "start")
+            .text(d => d);
+
+
+        // Line Chart
+        const xLine = d3.scalePoint()
+            .domain(selectedYears)
+            .range([0, width]);
+
+        const yLine = d3.scaleLinear()
+            .domain([0, d3.max(filteredData, d => d3.max(d.agencies.filter(a => selectedAgencies.includes(a.name)), agency => agency.count))]).nice()
+            .range([height, 0]);
+
+        const line = d3.line()
+            .x(d => xLine(d.year))
+            .y(d => yLine(d.count));
+
+        svgLine.selectAll("*").remove();
+
+        selectedAgencies.forEach(agency => {
+            const agencyData = filteredData.map(d => {
+                const agencyInfo = d.agencies.find(a => a.name === agency);
+                return { year: d.year, count: agencyInfo ? agencyInfo.count : 0 };
+            }).sort((a, b) => a.year - b.year); // Sort by year
+
+            svgLine.append("path")
+                .datum(agencyData)
+                .attr("fill", "none")
+                .attr("stroke", color(agency))
+                .attr("stroke-width", 1.5)
+                .attr("d", line);
+
+            svgLine.selectAll(".dot")
+                .data(agencyData)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => xLine(d.year))
+                .attr("cy", d => yLine(d.count))
+                .attr("r", 3)
+                .attr("fill", color(agency))
+                .append("title")
+                .text(d => `${d.year} - ${agency}: ${d.count}`);
+        });
+
+        svgLine.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .attr("class", "axis")
+            .call(d3.axisBottom(xLine));
+
+        svgLine.append("g")
+            .attr("class", "axis")
+            .call(d3.axisLeft(yLine).tickFormat(d3.format(".2s")));
+
+        svgLine.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + margin.bottom - 10)
+            .attr("text-anchor", "middle")
+            .text("Years");
+
+        svgLine.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -margin.left + 20)
+            .attr("text-anchor", "middle")
+            .text("Word Count");
+
+        // Bar Chart
+        const agencyCounts = selectedAgencies.map(agency => {
+            return {
+                agency: agency,
+                count: d3.sum(filteredData, d => {
+                    const agencyData = d.agencies.find(a => a.name === agency);
+                    return agencyData ? agencyData.count : 0;
+                })
+            };
+        }).sort((a, b) => a.count - b.count); // Sort by count
+
+        const xBar = d3.scaleBand()
+            .domain(agencyCounts.map(d => d.agency))
+            .rangeRound([0, width])
+            .paddingInner(0.05)
+            .align(0.1);
+
+        const yBar = d3.scaleLinear()
+            .domain([0, d3.max(agencyCounts, d => d.count)]).nice()
+            .rangeRound([height, 0]);
+
+        svgBar.selectAll("*").remove();
+
+        svgBar.append("g")
+            .selectAll("rect")
+            .data(agencyCounts)
+            .join("rect")
+            .attr("x", d => xBar(d.agency))
+            .attr("y", d => yBar(d.count))
+            .attr("height", d => height - yBar(d.count))
+            .attr("width", xBar.bandwidth())
+            .attr("fill", d => color(d.agency))
+            .append("title")
+            .text(d => `${d.agency}: ${d.count}`);
+
+        svgBar.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .attr("class", "axis")
+            .call(d3.axisBottom(xBar).tickFormat(d => d).tickSize(0))
+            .selectAll("text")
+            .attr("transform", "rotate(-45)")
+            .style("text-anchor", "end");
+
+        svgBar.append("g")
+            .attr("class", "axis")
+            .call(d3.axisLeft(yBar).tickFormat(d3.format(".2s")));
+
+        svgBar.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + margin.bottom - 10)
+            .attr("text-anchor", "middle")
+            .text("Agencies");
+
+        svgBar.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -margin.left + 20)
+            .attr("text-anchor", "middle")
+            .text("Word Count");
+
+        // Bar Chart Legend
+        const legendBar = svgBar.selectAll(".legend")
+            .data(selectedAgencies)
+            .enter().append("g")
+            .attr("class", "legend")
+            .attr("transform", (d, i) => `translate(0,${i * 20})`);
+
+        legendBar.append("rect")
+            .attr("x", width + 10)
+            .attr("width", 18)
+            .attr("height", 18)
+            .style("fill", color);
+
+        legendBar.append("text")
+            .attr("x", width + 35)
+            .attr("y", 9)
+            .attr("dy", ".35em")
+            .style("text-anchor", "start")
+            .text(d => d);
+    }
+
+    let agencyNameData = {}; // Store agency name data in a global variable
+
+    d3.json("agency_name.json").then(function(data) {
+        agencyNameData = data; // Assign loaded data to the global variable
+        const agencyListDiv = d3.select("#agency-help-list");
+        for (const shortName in data) {
+            const fullName = data[shortName];
+            agencyListDiv.append("div")
+                .attr("class", "agency-item")
+                .html(`
+                    <span class="agency-short-name">${shortName}</span>
+                    <span class="agency-full-name">${fullName}</span>
+                `);
+        }
+    });
+
+
+    function filterAgencyHelp() {
+        const searchInput = document.getElementById('agency-help-search');
+        const filterValue = searchInput.value.toLowerCase();
+        const agencyListItems = document.querySelectorAll('#agency-help-list .agency-item');
+
+        agencyListItems.forEach(item => {
+            const shortName = item.querySelector('.agency-short-name').textContent.toLowerCase();
+            const fullName = item.querySelector('.agency-full-name').textContent.toLowerCase();
+
+            if (shortName.includes(filterValue) || fullName.includes(filterValue)) {
+                item.style.display = ''; // Show the item
+            } else {
+                item.style.display = 'none'; // Hide the item
+            }
+        });
+    }
+</script>
+
+</body>
+

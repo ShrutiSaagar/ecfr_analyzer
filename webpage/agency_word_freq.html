@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agency Word Frequency Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script> -->
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            max-width: 1800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px; /* Reduced margin */
+            color: #0056b3;
+            font-size: 24px;
+            display: flex; /* To align total words with title */
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Spacing between title and summary */
+        }
+
+        /* Style for total words summary near h1 */
+        #total-words-summary-h1 {
+            font-size: 16px; /* Adjust as needed */
+            color: #777; /* Muted color */
+        }
+
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-tab {
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tab:hover {
+            background-color: #f0f0f0;
+            color: #0056b3;
+        }
+
+        .nav-tab.active {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .main-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .controls {
+            flex: 0 0 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 12px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            height: fit-content;
+        }
+
+        .summary-charts {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .summary-chart {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            height: 300px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .filter-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-header {
+            font-weight: bold;
+            margin-bottom: 3px;
+            font-size: 14px;
+        }
+
+        .filter-input {
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 13px;
+        }
+
+        .filter-list {
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            font-size: 13px;
+        }
+
+        .filter-item {
+            padding: 6px 8px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+
+        .filter-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .filter-item.selected {
+            background-color: #e3f2fd;
+        }
+
+        .selected-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .selected-tag {
+            background-color: #e3f2fd;
+            border: 1px solid #90caf9;
+            border-radius: 12px;
+            padding: 3px 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .remove-tag {
+            cursor: pointer;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .remove-tag:hover {
+            color: #d32f2f;
+        }
+
+        .controls button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            align-self: flex-start;
+            font-size: 13px;
+        }
+
+        .controls button:hover {
+            background-color: #0056b3;
+        }
+
+        .chart-container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        .chart {
+            width: 100%;
+            height: 500px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: white;
+            border: 1px solid black;
+            padding: 5px;
+            pointer-events: none;
+            opacity: 0;
+            border-radius: 3px;
+            box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+            font-size: 12px;
+        }
+
+        @media (max-width: 1600px) {
+            .chart-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .chart {
+                min-width: 0;
+            }
+
+            .summary-charts {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .controls {
+                flex: none;
+                width: auto;
+            }
+
+            .chart-container {
+                grid-template-columns: 1fr;
+            }
+
+            .chart {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        }
+
+        .agency-help {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-family: sans-serif;
+            font-size: 12px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .agency-help h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .agency-help .search-box {
+            margin-bottom: 10px;
+        }
+
+        .agency-help .search-box input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box; /* To include padding in width */
+        }
+
+        .agency-help .agency-list {
+            max-height: 200px; /* Adjust as needed */
+            overflow-y: scroll;
+            width: 100%;
+        }
+
+        .agency-help .agency-item {
+            padding: 5px;
+            border-bottom: 1px dotted #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .agency-help .agency-item:last-child {
+            border-bottom: none;
+        }
+
+        .agency-help .agency-short-name {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .agency-help .agency-full-name {
+            color: #777;
+            flex-grow: 1;
+            text-align: right;
+        }
+        svg text {
+            font-size: 12px;
+            shape-rendering: crispEdges;
+        }
+    </style>
+</head>
+<body>
+<h1>Dashboard for eCFR data - Agencies Word Counts Over the years</h1>
+    <div class="nav-container">
+        <div class="nav-tabs">
+            <a href="index.html" class="nav-tab">Overview</a>
+            <a href="agency_word_freq.html" class="nav-tab active">Detailed Analysis</a>
+            <!-- You can add more tabs if needed -->
+        </div>
+    </div>
+
+    <h1>eCFR Word Frequency Analysis by Agency
+        <div id="total-words-summary-h1"></div> <!-- Total words summary moved here -->
+    </h1>
+
+
+    <div class="main-container">
+        <div class="controls">
+            <div class="filter-section">
+                <div class="filter-header">Filter Agencies:</div>
+                <input type="text" id="agency-filter" class="filter-input" placeholder="Type to filter agencies...">
+                <div id="agency-list" class="filter-list"></div>
+                <div id="selected-agencies" class="selected-items"></div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-header">Filter Words:</div>
+                <input type="text" id="word-filter" class="filter-input" placeholder="Type to filter words...">
+                <div id="word-list" class="filter-list"></div>
+                <div id="selected-words" class="selected-items"></div>
+            </div>
+
+            <button id="reset-button">Reset Selections</button>
+        </div>
+
+        <div class="summary-charts">
+            <div id="agency-word-count" class="summary-chart"></div>
+            <div id="bar-chart" class="summary-chart"></div> <!-- Bar chart moved up -->
+            <div id="least-agency-summary" class="summary-chart"></div>
+            <div id="stacked-bar-chart" class="summary-chart"></div>
+            <div></div>
+            <div style="text-align:center;font-size:small;"> <i>Please select words to view stacked bar chart.</i></div>
+                    
+            <div class="agency-help">
+                <h3>Agency Name Helper</h3>
+                <div class="search-box">
+                    <input type="text" id="agency-help-search" placeholder="Search agency names..." onkeyup="filterAgencyHelp()">
+                </div>
+                <div class="agency-list" id="agency-help-list">
+                    <!-- Agency names will be populated here -->
+                </div>
+            </div>
+            <!-- total-words-summary div removed from here -->
+            <!-- Removed temporal-heatmap as it's not relevant for single year data -->
+        </div>
+    </div>
+<!-- 
+    <div class="chart-container">
+        <div id="stacked-bar-chart" class="chart"></div>
+        <div id="word-cloud-chart" class="chart"></div> 
+    </div> -->
+
+    <div class="tooltip" id="chart-tooltip"></div>
+
+    <script src="agency_word_freq.js"></script>
+</body>
+</html>

@@ -1,0 +1,5270 @@
+[
+  {
+    "year": "2017",
+    "agencies": [
+      {
+        "name": "CFTC",
+        "count": 11713316
+      },
+      {
+        "name": "SEC",
+        "count": 19617042
+      },
+      {
+        "name": "TREAS",
+        "count": 1118881
+      },
+      {
+        "name": "DOD",
+        "count": 22430865
+      },
+      {
+        "name": "FTC",
+        "count": 5345002
+      },
+      {
+        "name": "CPSC",
+        "count": 6788709
+      },
+      {
+        "name": "DOT",
+        "count": 243124
+      },
+      {
+        "name": "GAO",
+        "count": 55397
+      },
+      {
+        "name": "ONDCP",
+        "count": 88243
+      },
+      {
+        "name": "HHS",
+        "count": 11140020
+      },
+      {
+        "name": "USDA",
+        "count": 436182
+      },
+      {
+        "name": "DOS",
+        "count": 3642794
+      },
+      {
+        "name": "USAID",
+        "count": 2009382
+      },
+      {
+        "name": "VA",
+        "count": 17035804
+      },
+      {
+        "name": "DOE",
+        "count": 1670678
+      },
+      {
+        "name": "DOC",
+        "count": 428557
+      },
+      {
+        "name": "DOI",
+        "count": 396160
+      },
+      {
+        "name": "EPA",
+        "count": 578452
+      },
+      {
+        "name": "NASA",
+        "count": 4361438
+      },
+      {
+        "name": "NRC",
+        "count": 261171
+      },
+      {
+        "name": "CORP/CNCS",
+        "count": 2046009
+      },
+      {
+        "name": "SSA",
+        "count": 7176
+      },
+      {
+        "name": "HUD",
+        "count": 306875
+      },
+      {
+        "name": "PC",
+        "count": 223074
+      },
+      {
+        "name": "NSF",
+        "count": 1442480
+      },
+      {
+        "name": "NARA",
+        "count": 1255046
+      },
+      {
+        "name": "SBA",
+        "count": 4237181
+      },
+      {
+        "name": "DOJ",
+        "count": 6657551
+      },
+      {
+        "name": "DOL",
+        "count": 280720
+      },
+      {
+        "name": "DHS",
+        "count": 2557676
+      },
+      {
+        "name": "ED",
+        "count": 31063
+      },
+      {
+        "name": "EIB/USEIB",
+        "count": 838558
+      },
+      {
+        "name": "EAC",
+        "count": 21510
+      },
+      {
+        "name": "Gulf Restoration Council",
+        "count": 184
+      },
+      {
+        "name": "OMB",
+        "count": 1974078
+      },
+      {
+        "name": "ONHIR",
+        "count": 199240
+      },
+      {
+        "name": "DRBC",
+        "count": 162038
+      },
+      {
+        "name": "WRC",
+        "count": 155276
+      },
+      {
+        "name": "SRBC",
+        "count": 127496
+      },
+      {
+        "name": "TVA",
+        "count": 494637
+      },
+      {
+        "name": "CRC",
+        "count": 305029
+      },
+      {
+        "name": "OPM",
+        "count": 17000693
+      },
+      {
+        "name": "DC",
+        "count": 69125
+      },
+      {
+        "name": "ARTS",
+        "count": 1174743
+      },
+      {
+        "name": "LSC",
+        "count": 747135
+      },
+      {
+        "name": "AFRH",
+        "count": 113897
+      },
+      {
+        "name": "NCLIS",
+        "count": 116200
+      },
+      {
+        "name": "HST",
+        "count": 116125
+      },
+      {
+        "name": "CFA",
+        "count": 135650
+      },
+      {
+        "name": "ARCTIC",
+        "count": 45600
+      },
+      {
+        "name": "JMMFF",
+        "count": 124850
+      },
+      {
+        "name": "URMCC",
+        "count": 102429
+      },
+      {
+        "name": "NEIGHBOR",
+        "count": 32768
+      },
+      {
+        "name": "MSPB",
+        "count": 1171971
+      },
+      {
+        "name": "ITC",
+        "count": 1634167
+      },
+      {
+        "name": "ODNI",
+        "count": 255788
+      },
+      {
+        "name": "IOELB",
+        "count": 35557
+      },
+      {
+        "name": "FRTIB",
+        "count": 1311574
+      },
+      {
+        "name": "OSC",
+        "count": 266611
+      },
+      {
+        "name": "NCD",
+        "count": 205222
+      },
+      {
+        "name": "ARC",
+        "count": 1443
+      },
+      {
+        "name": "OGE",
+        "count": 2882616
+      },
+      {
+        "name": "FDIC",
+        "count": 22401568
+      },
+      {
+        "name": "FCC",
+        "count": 100821366
+      },
+      {
+        "name": "FCSIC",
+        "count": 586810
+      },
+      {
+        "name": "FCA",
+        "count": 6983901
+      },
+      {
+        "name": "DFC",
+        "count": 190935
+      },
+      {
+        "name": "FEC",
+        "count": 221154
+      },
+      {
+        "name": "ICC",
+        "count": 16576
+      },
+      {
+        "name": "PRC",
+        "count": 846510
+      },
+      {
+        "name": "SIGAR",
+        "count": 198090
+      },
+      {
+        "name": "CFPB",
+        "count": 24826681
+      },
+      {
+        "name": "FLRA",
+        "count": 235768
+      },
+      {
+        "name": "GSA",
+        "count": 1079554
+      },
+      {
+        "name": "USPS",
+        "count": 2179928
+      },
+      {
+        "name": "NLRB",
+        "count": 14430
+      },
+      {
+        "name": "EEOC",
+        "count": 12099
+      },
+      {
+        "name": "IAF",
+        "count": 179813
+      },
+      {
+        "name": "CSOSA",
+        "count": 146679
+      },
+      {
+        "name": "MSHFRC",
+        "count": 20720
+      },
+      {
+        "name": "FHFA",
+        "count": 6884802
+      },
+      {
+        "name": "NCUA",
+        "count": 10633705
+      },
+      {
+        "name": "CIGIE",
+        "count": 150477
+      },
+      {
+        "name": "Military Compensation and Retirement Modernization Commission",
+        "count": 67118
+      },
+      {
+        "name": "IJC",
+        "count": 28504
+      },
+      {
+        "name": "USAGM",
+        "count": 569688
+      },
+      {
+        "name": "FSGB",
+        "count": 45458
+      },
+      {
+        "name": "IBWC",
+        "count": 150136
+      },
+      {
+        "name": "USIDCA",
+        "count": 68740
+      },
+      {
+        "name": "MCC",
+        "count": 80290
+      },
+      {
+        "name": "Disputes Panel",
+        "count": 416332
+      },
+      {
+        "name": "FSLRB",
+        "count": 416332
+      },
+      {
+        "name": "USADF",
+        "count": 202448
+      },
+      {
+        "name": "JUSFC",
+        "count": 25452
+      },
+      {
+        "name": "USIP",
+        "count": 25690
+      },
+      {
+        "name": "ESGLB",
+        "count": 135786
+      },
+      {
+        "name": "EOGGLB",
+        "count": 138516
+      },
+      {
+        "name": "OIC",
+        "count": 77016
+      },
+      {
+        "name": "NCPPCC",
+        "count": 35256
+      },
+      {
+        "name": "ATSB",
+        "count": 106488
+      },
+      {
+        "name": "PCLOB",
+        "count": 22964
+      },
+      {
+        "name": "FMC",
+        "count": 1569046
+      },
+      {
+        "name": "ABMC",
+        "count": 79776
+      },
+      {
+        "name": "SI",
+        "count": 24138
+      },
+      {
+        "name": "LOC",
+        "count": 103566
+      },
+      {
+        "name": "ACHP",
+        "count": 282618
+      },
+      {
+        "name": "PADC",
+        "count": 320688
+      },
+      {
+        "name": "PT",
+        "count": 377424
+      },
+      {
+        "name": "ATBCB",
+        "count": 1320278
+      },
+      {
+        "name": "OCNMT",
+        "count": 4608
+      },
+      {
+        "name": "Udall Foundation",
+        "count": 71226
+      },
+      {
+        "name": "SSS",
+        "count": 372875
+      },
+      {
+        "name": "NCTC",
+        "count": 193553
+      },
+      {
+        "name": "CIA",
+        "count": 287065
+      },
+      {
+        "name": "OMSN",
+        "count": 34903
+      },
+      {
+        "name": "OVPUS",
+        "count": 30799
+      },
+      {
+        "name": "ACFR",
+        "count": 24900
+      },
+      {
+        "name": "ACUS",
+        "count": 22734
+      },
+      {
+        "name": "NCEP",
+        "count": 33052
+      },
+      {
+        "name": "NCMNPS",
+        "count": 25824
+      },
+      {
+        "name": "NCPC",
+        "count": 51797
+      },
+      {
+        "name": "PCWHF",
+        "count": 28280
+      },
+      {
+        "name": "CPPBSD",
+        "count": 77901
+      },
+      {
+        "name": "FPRS",
+        "count": 36
+      },
+      {
+        "name": "FPMRS",
+        "count": 1362184
+      },
+      {
+        "name": "FASC",
+        "count": 36
+      },
+      {
+        "name": "FTRS",
+        "count": 329604
+      },
+      {
+        "name": "AMTRAK",
+        "count": 258333
+      },
+      {
+        "name": "NTSB",
+        "count": 1391155
+      },
+      {
+        "name": "STB",
+        "count": 8309304
+      },
+      {
+        "name": "MMC",
+        "count": 540052
+      },
+      {
+        "name": "FirstNet",
+        "count": 31130
+      },
+      {
+        "name": "FRS",
+        "count": 39324257
+      },
+      {
+        "name": "FFB",
+        "count": 77382
+      },
+      {
+        "name": "FFIEC",
+        "count": 561576
+      },
+      {
+        "name": "FSOC",
+        "count": 712620
+      },
+      {
+        "name": "FARC",
+        "count": 8440485
+      }
+    ]
+  },
+  {
+    "year": "2021",
+    "agencies": [
+      {
+        "name": "FRTIB",
+        "count": 1209891
+      },
+      {
+        "name": "DOS",
+        "count": 9315409
+      },
+      {
+        "name": "USAID",
+        "count": 5005009
+      },
+      {
+        "name": "PC",
+        "count": 635502
+      },
+      {
+        "name": "IJC",
+        "count": 73296
+      },
+      {
+        "name": "USAGM",
+        "count": 1453948
+      },
+      {
+        "name": "DFC",
+        "count": 426900
+      },
+      {
+        "name": "FSGB",
+        "count": 116892
+      },
+      {
+        "name": "IAF",
+        "count": 453987
+      },
+      {
+        "name": "IBWC",
+        "count": 386064
+      },
+      {
+        "name": "USIDCA",
+        "count": 176760
+      },
+      {
+        "name": "MCC",
+        "count": 233964
+      },
+      {
+        "name": "FLRA",
+        "count": 559902
+      },
+      {
+        "name": "Disputes Panel",
+        "count": 1070568
+      },
+      {
+        "name": "FSLRB",
+        "count": 1070568
+      },
+      {
+        "name": "USADF",
+        "count": 568634
+      },
+      {
+        "name": "JUSFC",
+        "count": 65448
+      },
+      {
+        "name": "USIP",
+        "count": 66060
+      },
+      {
+        "name": "DRBC",
+        "count": 372466
+      },
+      {
+        "name": "WRC",
+        "count": 352900
+      },
+      {
+        "name": "SRBC",
+        "count": 323728
+      },
+      {
+        "name": "TVA",
+        "count": 1273428
+      },
+      {
+        "name": "SI",
+        "count": 9387
+      },
+      {
+        "name": "LOC",
+        "count": 43223
+      },
+      {
+        "name": "ACHP",
+        "count": 109907
+      },
+      {
+        "name": "PADC",
+        "count": 124712
+      },
+      {
+        "name": "PT",
+        "count": 155386
+      },
+      {
+        "name": "ATBCB",
+        "count": 518924
+      },
+      {
+        "name": "DOC",
+        "count": 985199
+      },
+      {
+        "name": "DOT",
+        "count": 543168
+      },
+      {
+        "name": "NARA",
+        "count": 504094
+      },
+      {
+        "name": "SSS",
+        "count": 471000
+      },
+      {
+        "name": "ODNI",
+        "count": 253341
+      },
+      {
+        "name": "NCTC",
+        "count": 244488
+      },
+      {
+        "name": "CIA",
+        "count": 362520
+      },
+      {
+        "name": "OMSN",
+        "count": 44088
+      },
+      {
+        "name": "OVPUS",
+        "count": 38904
+      },
+      {
+        "name": "DOD",
+        "count": 19881180
+      },
+      {
+        "name": "CPSC",
+        "count": 8162824
+      },
+      {
+        "name": "ITC",
+        "count": 1724834
+      },
+      {
+        "name": "NASA",
+        "count": 4784474
+      },
+      {
+        "name": "ATSB",
+        "count": 94656
+      },
+      {
+        "name": "DHS",
+        "count": 5326661
+      },
+      {
+        "name": "CFTC",
+        "count": 20999564
+      },
+      {
+        "name": "SEC",
+        "count": 36543309
+      },
+      {
+        "name": "TREAS",
+        "count": 1754915
+      },
+      {
+        "name": "NSF",
+        "count": 1864517
+      },
+      {
+        "name": "CRC",
+        "count": 373509
+      },
+      {
+        "name": "OPM",
+        "count": 16311562
+      },
+      {
+        "name": "DC",
+        "count": 85715
+      },
+      {
+        "name": "ARTS",
+        "count": 1682102
+      },
+      {
+        "name": "CORP/CNCS",
+        "count": 2533584
+      },
+      {
+        "name": "FTC",
+        "count": 6372637
+      },
+      {
+        "name": "LSC",
+        "count": 997938
+      },
+      {
+        "name": "NCLIS",
+        "count": 144088
+      },
+      {
+        "name": "HST",
+        "count": 143995
+      },
+      {
+        "name": "CFA",
+        "count": 327112
+      },
+      {
+        "name": "ARCTIC",
+        "count": 56544
+      },
+      {
+        "name": "JMMFF",
+        "count": 154814
+      },
+      {
+        "name": "HHS",
+        "count": 15105032
+      },
+      {
+        "name": "DOJ",
+        "count": 8021681
+      },
+      {
+        "name": "DOL",
+        "count": 546443
+      },
+      {
+        "name": "CPPBSD",
+        "count": 160850
+      },
+      {
+        "name": "GSA",
+        "count": 2566345
+      },
+      {
+        "name": "DOE",
+        "count": 3738082
+      },
+      {
+        "name": "NCD",
+        "count": 177888
+      },
+      {
+        "name": "ABMC",
+        "count": 42798
+      },
+      {
+        "name": "USDA",
+        "count": 759062
+      },
+      {
+        "name": "VA",
+        "count": 28212911
+      },
+      {
+        "name": "DOI",
+        "count": 824686
+      },
+      {
+        "name": "EPA",
+        "count": 1404844
+      },
+      {
+        "name": "NRC",
+        "count": 554608
+      },
+      {
+        "name": "SSA",
+        "count": 16280
+      },
+      {
+        "name": "HUD",
+        "count": 691416
+      },
+      {
+        "name": "NMB",
+        "count": 7656
+      },
+      {
+        "name": "OCNMT",
+        "count": 1792
+      },
+      {
+        "name": "Udall Foundation",
+        "count": 27699
+      },
+      {
+        "name": "SBA",
+        "count": 3064783
+      },
+      {
+        "name": "ED",
+        "count": 42466
+      },
+      {
+        "name": "EIB/USEIB",
+        "count": 1039393
+      },
+      {
+        "name": "ONDCP",
+        "count": 281979
+      },
+      {
+        "name": "EAC",
+        "count": 34086
+      },
+      {
+        "name": "Gulf Restoration Council",
+        "count": 472
+      },
+      {
+        "name": "OMB",
+        "count": 3403009
+      },
+      {
+        "name": "NEIGHBOR",
+        "count": 40960
+      },
+      {
+        "name": "OIC",
+        "count": 89852
+      },
+      {
+        "name": "CSOSA",
+        "count": 187993
+      },
+      {
+        "name": "NCPPCC",
+        "count": 41132
+      },
+      {
+        "name": "MSPB",
+        "count": 1045143
+      },
+      {
+        "name": "ONHIR",
+        "count": 224145
+      },
+      {
+        "name": "IOELB",
+        "count": 31713
+      },
+      {
+        "name": "OSC",
+        "count": 245053
+      },
+      {
+        "name": "ARC",
+        "count": 1287
+      },
+      {
+        "name": "AFRH",
+        "count": 144342
+      },
+      {
+        "name": "OGE",
+        "count": 2593948
+      },
+      {
+        "name": "FDIC",
+        "count": 22596123
+      },
+      {
+        "name": "FCC",
+        "count": 117034813
+      },
+      {
+        "name": "FCSIC",
+        "count": 716626
+      },
+      {
+        "name": "FCA",
+        "count": 8689471
+      },
+      {
+        "name": "FEC",
+        "count": 322367
+      },
+      {
+        "name": "ICC",
+        "count": 14784
+      },
+      {
+        "name": "PRC",
+        "count": 866228
+      },
+      {
+        "name": "USPS",
+        "count": 1793257
+      },
+      {
+        "name": "NLRB",
+        "count": 10197
+      },
+      {
+        "name": "EEOC",
+        "count": 10791
+      },
+      {
+        "name": "MSHFRC",
+        "count": 18480
+      },
+      {
+        "name": "FHFA",
+        "count": 10505908
+      },
+      {
+        "name": "SIGAR",
+        "count": 177012
+      },
+      {
+        "name": "CFPB",
+        "count": 36046261
+      },
+      {
+        "name": "NCUA",
+        "count": 13470922
+      },
+      {
+        "name": "CIGIE",
+        "count": 220890
+      },
+      {
+        "name": "Military Compensation and Retirement Modernization Commission",
+        "count": 59862
+      },
+      {
+        "name": "FASC",
+        "count": 23439
+      },
+      {
+        "name": "FPRS",
+        "count": 60
+      },
+      {
+        "name": "FPMRS",
+        "count": 2273770
+      },
+      {
+        "name": "FTRS",
+        "count": 544090
+      },
+      {
+        "name": "PCLOB",
+        "count": 56100
+      },
+      {
+        "name": "FMC",
+        "count": 1381319
+      },
+      {
+        "name": "ESGLB",
+        "count": 90524
+      },
+      {
+        "name": "EOGGLB",
+        "count": 92344
+      },
+      {
+        "name": "URMCC",
+        "count": 91048
+      },
+      {
+        "name": "AMTRAK",
+        "count": 254815
+      },
+      {
+        "name": "NTSB",
+        "count": 1477551
+      },
+      {
+        "name": "STB",
+        "count": 8248600
+      },
+      {
+        "name": "FARC",
+        "count": 19384199
+      },
+      {
+        "name": "MMC",
+        "count": 794908
+      },
+      {
+        "name": "FFB",
+        "count": 96011
+      },
+      {
+        "name": "FFIEC",
+        "count": 710736
+      },
+      {
+        "name": "FSOC",
+        "count": 1056456
+      },
+      {
+        "name": "FRS",
+        "count": 51596312
+      },
+      {
+        "name": "FirstNet",
+        "count": 85767
+      }
+    ]
+  },
+  {
+    "year": "2022",
+    "agencies": [
+      {
+        "name": "ACFR",
+        "count": 12134
+      },
+      {
+        "name": "ACUS",
+        "count": 11440
+      },
+      {
+        "name": "NCEP",
+        "count": 21321
+      },
+      {
+        "name": "NCMNPS",
+        "count": 26947
+      },
+      {
+        "name": "NCPC",
+        "count": 45008
+      },
+      {
+        "name": "PCWHF",
+        "count": 18935
+      },
+      {
+        "name": "DOJ",
+        "count": 7065254
+      },
+      {
+        "name": "TREAS",
+        "count": 1248491
+      },
+      {
+        "name": "VA",
+        "count": 23287652
+      },
+      {
+        "name": "AFRH",
+        "count": 98290
+      },
+      {
+        "name": "FTC",
+        "count": 6493875
+      },
+      {
+        "name": "CPSC",
+        "count": 8244395
+      },
+      {
+        "name": "ABMC",
+        "count": 116166
+      },
+      {
+        "name": "SI",
+        "count": 25479
+      },
+      {
+        "name": "LOC",
+        "count": 116850
+      },
+      {
+        "name": "HUD",
+        "count": 774535
+      },
+      {
+        "name": "NEIGHBOR",
+        "count": 20480
+      },
+      {
+        "name": "PCLOB",
+        "count": 35700
+      },
+      {
+        "name": "DHS",
+        "count": 7745487
+      },
+      {
+        "name": "DOS",
+        "count": 4165715
+      },
+      {
+        "name": "USAID",
+        "count": 3328603
+      },
+      {
+        "name": "PC",
+        "count": 235440
+      },
+      {
+        "name": "IJC",
+        "count": 26468
+      },
+      {
+        "name": "USAGM",
+        "count": 594284
+      },
+      {
+        "name": "DFC",
+        "count": 154275
+      },
+      {
+        "name": "FSGB",
+        "count": 42211
+      },
+      {
+        "name": "NASA",
+        "count": 4328232
+      },
+      {
+        "name": "ATSB",
+        "count": 70992
+      },
+      {
+        "name": "FMC",
+        "count": 1284409
+      },
+      {
+        "name": "OIC",
+        "count": 77016
+      },
+      {
+        "name": "ACHP",
+        "count": 298319
+      },
+      {
+        "name": "PADC",
+        "count": 338504
+      },
+      {
+        "name": "PT",
+        "count": 421762
+      },
+      {
+        "name": "ATBCB",
+        "count": 1393402
+      },
+      {
+        "name": "NARA",
+        "count": 1348624
+      },
+      {
+        "name": "OCNMT",
+        "count": 4864
+      },
+      {
+        "name": "Udall Foundation",
+        "count": 75183
+      },
+      {
+        "name": "IAF",
+        "count": 164221
+      },
+      {
+        "name": "IBWC",
+        "count": 139412
+      },
+      {
+        "name": "USIDCA",
+        "count": 63830
+      },
+      {
+        "name": "MCC",
+        "count": 84487
+      },
+      {
+        "name": "FLRA",
+        "count": 203741
+      },
+      {
+        "name": "Disputes Panel",
+        "count": 386594
+      },
+      {
+        "name": "FSLRB",
+        "count": 386594
+      },
+      {
+        "name": "USADF",
+        "count": 209257
+      },
+      {
+        "name": "JUSFC",
+        "count": 23634
+      },
+      {
+        "name": "USIP",
+        "count": 23855
+      },
+      {
+        "name": "CSOSA",
+        "count": 162322
+      },
+      {
+        "name": "NCPPCC",
+        "count": 35256
+      },
+      {
+        "name": "DRBC",
+        "count": 210560
+      },
+      {
+        "name": "WRC",
+        "count": 197624
+      },
+      {
+        "name": "SRBC",
+        "count": 182990
+      },
+      {
+        "name": "TVA",
+        "count": 718214
+      },
+      {
+        "name": "ONHIR",
+        "count": 348670
+      },
+      {
+        "name": "SBA",
+        "count": 5253115
+      },
+      {
+        "name": "ESGLB",
+        "count": 155184
+      },
+      {
+        "name": "EOGGLB",
+        "count": 158304
+      },
+      {
+        "name": "DOC",
+        "count": 1139169
+      },
+      {
+        "name": "DOT",
+        "count": 754903
+      },
+      {
+        "name": "USDA",
+        "count": 791251
+      },
+      {
+        "name": "DOL",
+        "count": 651355
+      },
+      {
+        "name": "CPPBSD",
+        "count": 273529
+      },
+      {
+        "name": "GSA",
+        "count": 3285167
+      },
+      {
+        "name": "DOE",
+        "count": 4361368
+      },
+      {
+        "name": "ITC",
+        "count": 1149894
+      },
+      {
+        "name": "MSHFRC",
+        "count": 7840
+      },
+      {
+        "name": "DOI",
+        "count": 849191
+      },
+      {
+        "name": "EPA",
+        "count": 1690284
+      },
+      {
+        "name": "FASC",
+        "count": 99008
+      },
+      {
+        "name": "FPRS",
+        "count": 102
+      },
+      {
+        "name": "FPMRS",
+        "count": 3845863
+      },
+      {
+        "name": "FTRS",
+        "count": 905230
+      },
+      {
+        "name": "FRTIB",
+        "count": 517071
+      },
+      {
+        "name": "CFTC",
+        "count": 11562956
+      },
+      {
+        "name": "SEC",
+        "count": 20218505
+      },
+      {
+        "name": "SSS",
+        "count": 529875
+      },
+      {
+        "name": "ODNI",
+        "count": 251408
+      },
+      {
+        "name": "NCTC",
+        "count": 275049
+      },
+      {
+        "name": "CIA",
+        "count": 407835
+      },
+      {
+        "name": "OMSN",
+        "count": 49599
+      },
+      {
+        "name": "OVPUS",
+        "count": 43767
+      },
+      {
+        "name": "DOD",
+        "count": 21927842
+      },
+      {
+        "name": "OPM",
+        "count": 7708850
+      },
+      {
+        "name": "MSPB",
+        "count": 443394
+      },
+      {
+        "name": "OMB",
+        "count": 3027086
+      },
+      {
+        "name": "IOELB",
+        "count": 13454
+      },
+      {
+        "name": "OSC",
+        "count": 105231
+      },
+      {
+        "name": "ARC",
+        "count": 546
+      },
+      {
+        "name": "OGE",
+        "count": 1096060
+      },
+      {
+        "name": "FDIC",
+        "count": 17649984
+      },
+      {
+        "name": "FHFA",
+        "count": 8618242
+      },
+      {
+        "name": "FCC",
+        "count": 90359010
+      },
+      {
+        "name": "FCSIC",
+        "count": 545934
+      },
+      {
+        "name": "FCA",
+        "count": 6703923
+      },
+      {
+        "name": "SIGAR",
+        "count": 75096
+      },
+      {
+        "name": "CFPB",
+        "count": 28838826
+      },
+      {
+        "name": "FEC",
+        "count": 622840
+      },
+      {
+        "name": "ICC",
+        "count": 6272
+      },
+      {
+        "name": "NSF",
+        "count": 1390096
+      },
+      {
+        "name": "HHS",
+        "count": 11908654
+      },
+      {
+        "name": "PRC",
+        "count": 693620
+      },
+      {
+        "name": "NRC",
+        "count": 628542
+      },
+      {
+        "name": "EIB/USEIB",
+        "count": 847938
+      },
+      {
+        "name": "ED",
+        "count": 20997
+      },
+      {
+        "name": "USPS",
+        "count": 1463374
+      },
+      {
+        "name": "NLRB",
+        "count": 4326
+      },
+      {
+        "name": "EEOC",
+        "count": 4578
+      },
+      {
+        "name": "CRC",
+        "count": 273272
+      },
+      {
+        "name": "DC",
+        "count": 63595
+      },
+      {
+        "name": "ARTS",
+        "count": 1352772
+      },
+      {
+        "name": "CORP/CNCS",
+        "count": 1879491
+      },
+      {
+        "name": "LSC",
+        "count": 745407
+      },
+      {
+        "name": "NCLIS",
+        "count": 106904
+      },
+      {
+        "name": "HST",
+        "count": 106835
+      },
+      {
+        "name": "CFA",
+        "count": 242696
+      },
+      {
+        "name": "ARCTIC",
+        "count": 41952
+      },
+      {
+        "name": "JMMFF",
+        "count": 114862
+      },
+      {
+        "name": "NCUA",
+        "count": 10942269
+      },
+      {
+        "name": "CIGIE",
+        "count": 96572
+      },
+      {
+        "name": "Military Compensation and Retirement Modernization Commission",
+        "count": 25396
+      },
+      {
+        "name": "NCD",
+        "count": 78436
+      },
+      {
+        "name": "NMB",
+        "count": 3248
+      },
+      {
+        "name": "SSA",
+        "count": 15804
+      },
+      {
+        "name": "ONDCP",
+        "count": 313000
+      },
+      {
+        "name": "EAC",
+        "count": 60424
+      },
+      {
+        "name": "Gulf Restoration Council",
+        "count": 265
+      },
+      {
+        "name": "URMCC",
+        "count": 125191
+      },
+      {
+        "name": "AMTRAK",
+        "count": 282613
+      },
+      {
+        "name": "NTSB",
+        "count": 1635339
+      },
+      {
+        "name": "STB",
+        "count": 9160761
+      },
+      {
+        "name": "FARC",
+        "count": 22776373
+      },
+      {
+        "name": "MMC",
+        "count": 746364
+      },
+      {
+        "name": "FRS",
+        "count": 40483351
+      },
+      {
+        "name": "FFB",
+        "count": 74516
+      },
+      {
+        "name": "FFIEC",
+        "count": 553782
+      },
+      {
+        "name": "FSOC",
+        "count": 819936
+      },
+      {
+        "name": "FirstNet",
+        "count": 65274
+      }
+    ]
+  },
+  {
+    "year": "2024",
+    "agencies": [
+      {
+        "name": "GAO",
+        "count": 56332
+      },
+      {
+        "name": "DOL",
+        "count": 818918
+      },
+      {
+        "name": "NSF",
+        "count": 4124475
+      },
+      {
+        "name": "HHS",
+        "count": 34571214
+      },
+      {
+        "name": "PRC",
+        "count": 683251
+      },
+      {
+        "name": "FHFA",
+        "count": 9142906
+      },
+      {
+        "name": "SIGAR",
+        "count": 273360
+      },
+      {
+        "name": "CFPB",
+        "count": 30940876
+      },
+      {
+        "name": "OPM",
+        "count": 25358447
+      },
+      {
+        "name": "MSPB",
+        "count": 1610555
+      },
+      {
+        "name": "OMB",
+        "count": 4957861
+      },
+      {
+        "name": "ODNI",
+        "count": 261036
+      },
+      {
+        "name": "IOELB",
+        "count": 49011
+      },
+      {
+        "name": "FRTIB",
+        "count": 1889178
+      },
+      {
+        "name": "OSC",
+        "count": 380766
+      },
+      {
+        "name": "NRC",
+        "count": 822379
+      },
+      {
+        "name": "FLRA",
+        "count": 513336
+      },
+      {
+        "name": "TREAS",
+        "count": 1895788
+      },
+      {
+        "name": "ARC",
+        "count": 1938
+      },
+      {
+        "name": "AFRH",
+        "count": 151309
+      },
+      {
+        "name": "OGE",
+        "count": 4189601
+      },
+      {
+        "name": "FDIC",
+        "count": 19569655
+      },
+      {
+        "name": "DOE",
+        "count": 5641093
+      },
+      {
+        "name": "DOI",
+        "count": 1080077
+      },
+      {
+        "name": "DOD",
+        "count": 17357154
+      },
+      {
+        "name": "DOJ",
+        "count": 10434596
+      },
+      {
+        "name": "FCC",
+        "count": 117660764
+      },
+      {
+        "name": "FCSIC",
+        "count": 588444
+      },
+      {
+        "name": "FCA",
+        "count": 6889725
+      },
+      {
+        "name": "DFC",
+        "count": 384349
+      },
+      {
+        "name": "SEC",
+        "count": 38108211
+      },
+      {
+        "name": "DHS",
+        "count": 8538516
+      },
+      {
+        "name": "FEC",
+        "count": 947940
+      },
+      {
+        "name": "ICC",
+        "count": 22350
+      },
+      {
+        "name": "CFTC",
+        "count": 21188547
+      },
+      {
+        "name": "FTC",
+        "count": 8082743
+      },
+      {
+        "name": "DOT",
+        "count": 1655347
+      },
+      {
+        "name": "EIB/USEIB",
+        "count": 949093
+      },
+      {
+        "name": "ED",
+        "count": 59009
+      },
+      {
+        "name": "EPA",
+        "count": 2184470
+      },
+      {
+        "name": "GSA",
+        "count": 4313971
+      },
+      {
+        "name": "NASA",
+        "count": 7362264
+      },
+      {
+        "name": "USPS",
+        "count": 1346577
+      },
+      {
+        "name": "NLRB",
+        "count": 15708
+      },
+      {
+        "name": "EEOC",
+        "count": 16575
+      },
+      {
+        "name": "IAF",
+        "count": 406047
+      },
+      {
+        "name": "HUD",
+        "count": 1019226
+      },
+      {
+        "name": "NARA",
+        "count": 2593225
+      },
+      {
+        "name": "CRC",
+        "count": 810815
+      },
+      {
+        "name": "TVA",
+        "count": 878895
+      },
+      {
+        "name": "CSOSA",
+        "count": 261392
+      },
+      {
+        "name": "CPSC",
+        "count": 10281992
+      },
+      {
+        "name": "USDA",
+        "count": 1012499
+      },
+      {
+        "name": "MSHFRC",
+        "count": 28458
+      },
+      {
+        "name": "NCUA",
+        "count": 11191515
+      },
+      {
+        "name": "CIGIE",
+        "count": 351645
+      },
+      {
+        "name": "Military Compensation and Retirement Modernization Commission",
+        "count": 92412
+      },
+      {
+        "name": "NCD",
+        "count": 268973
+      },
+      {
+        "name": "NMB",
+        "count": 11781
+      },
+      {
+        "name": "FMCS",
+        "count": 19746
+      },
+      {
+        "name": "ITC",
+        "count": 1466089
+      },
+      {
+        "name": "URMCC",
+        "count": 261694
+      },
+      {
+        "name": "NEIGHBOR",
+        "count": 63457
+      },
+      {
+        "name": "CPPBSD",
+        "count": 396576
+      },
+      {
+        "name": "PCLOB",
+        "count": 45864
+      },
+      {
+        "name": "DOS",
+        "count": 8906639
+      },
+      {
+        "name": "USAID",
+        "count": 5703394
+      },
+      {
+        "name": "VA",
+        "count": 25728080
+      },
+      {
+        "name": "PC",
+        "count": 634349
+      },
+      {
+        "name": "IJC",
+        "count": 65120
+      },
+      {
+        "name": "USAGM",
+        "count": 1324498
+      },
+      {
+        "name": "FSGB",
+        "count": 103552
+      },
+      {
+        "name": "IBWC",
+        "count": 343008
+      },
+      {
+        "name": "USIDCA",
+        "count": 157024
+      },
+      {
+        "name": "MCC",
+        "count": 207808
+      },
+      {
+        "name": "Disputes Panel",
+        "count": 950784
+      },
+      {
+        "name": "FSLRB",
+        "count": 950784
+      },
+      {
+        "name": "USADF",
+        "count": 507844
+      },
+      {
+        "name": "JUSFC",
+        "count": 58144
+      },
+      {
+        "name": "USIP",
+        "count": 58656
+      },
+      {
+        "name": "ABMC",
+        "count": 207706
+      },
+      {
+        "name": "SI",
+        "count": 45492
+      },
+      {
+        "name": "LOC",
+        "count": 208930
+      },
+      {
+        "name": "ACHP",
+        "count": 533630
+      },
+      {
+        "name": "DOC",
+        "count": 1443137
+      },
+      {
+        "name": "PADC",
+        "count": 605404
+      },
+      {
+        "name": "PT",
+        "count": 754392
+      },
+      {
+        "name": "ATBCB",
+        "count": 2780729
+      },
+      {
+        "name": "CORP/CNCS",
+        "count": 5710918
+      },
+      {
+        "name": "ATSB",
+        "count": 153868
+      },
+      {
+        "name": "DRBC",
+        "count": 260189
+      },
+      {
+        "name": "WRC",
+        "count": 239819
+      },
+      {
+        "name": "SRBC",
+        "count": 224385
+      },
+      {
+        "name": "FMC",
+        "count": 2284623
+      },
+      {
+        "name": "SBA",
+        "count": 5791421
+      },
+      {
+        "name": "ESGLB",
+        "count": 161625
+      },
+      {
+        "name": "EOGGLB",
+        "count": 164900
+      },
+      {
+        "name": "FASC",
+        "count": 139680
+      },
+      {
+        "name": "FPRS",
+        "count": 144
+      },
+      {
+        "name": "FPMRS",
+        "count": 5421454
+      },
+      {
+        "name": "FTRS",
+        "count": 1286492
+      },
+      {
+        "name": "OCNMT",
+        "count": 8670
+      },
+      {
+        "name": "Udall Foundation",
+        "count": 134504
+      },
+      {
+        "name": "SSA",
+        "count": 22589
+      },
+      {
+        "name": "SSS",
+        "count": 453552
+      },
+      {
+        "name": "NCTC",
+        "count": 213759
+      },
+      {
+        "name": "CIA",
+        "count": 315252
+      },
+      {
+        "name": "OMSN",
+        "count": 38535
+      },
+      {
+        "name": "OVPUS",
+        "count": 33999
+      },
+      {
+        "name": "DC",
+        "count": 187952
+      },
+      {
+        "name": "ARTS",
+        "count": 4005336
+      },
+      {
+        "name": "LSC",
+        "count": 2203426
+      },
+      {
+        "name": "NCLIS",
+        "count": 315656
+      },
+      {
+        "name": "HST",
+        "count": 315588
+      },
+      {
+        "name": "CFA",
+        "count": 717264
+      },
+      {
+        "name": "ARCTIC",
+        "count": 123896
+      },
+      {
+        "name": "JMMFF",
+        "count": 339388
+      },
+      {
+        "name": "ONDCP",
+        "count": 273025
+      },
+      {
+        "name": "EAC",
+        "count": 92658
+      },
+      {
+        "name": "Gulf Restoration Council",
+        "count": 556
+      },
+      {
+        "name": "OIC",
+        "count": 109072
+      },
+      {
+        "name": "NCPPCC",
+        "count": 49844
+      },
+      {
+        "name": "ONHIR",
+        "count": 99622
+      },
+      {
+        "name": "AMTRAK",
+        "count": 384373
+      },
+      {
+        "name": "NTSB",
+        "count": 2226973
+      },
+      {
+        "name": "STB",
+        "count": 12945247
+      },
+      {
+        "name": "FRS",
+        "count": 44439739
+      },
+      {
+        "name": "FFB",
+        "count": 75790
+      },
+      {
+        "name": "FFIEC",
+        "count": 590420
+      },
+      {
+        "name": "FSOC",
+        "count": 608467
+      },
+      {
+        "name": "MMC",
+        "count": 787930
+      },
+      {
+        "name": "FirstNet",
+        "count": 83490
+      },
+      {
+        "name": "FARC",
+        "count": 29301391
+      }
+    ]
+  },
+  {
+    "year": "2019",
+    "agencies": [
+      {
+        "name": "NRC",
+        "count": 766079
+      },
+      {
+        "name": "HHS",
+        "count": 12127738
+      },
+      {
+        "name": "USDA",
+        "count": 980002
+      },
+      {
+        "name": "DOS",
+        "count": 5304354
+      },
+      {
+        "name": "USAID",
+        "count": 4081984
+      },
+      {
+        "name": "VA",
+        "count": 20099488
+      },
+      {
+        "name": "DOE",
+        "count": 5077375
+      },
+      {
+        "name": "TREAS",
+        "count": 1713091
+      },
+      {
+        "name": "DOD",
+        "count": 50906021
+      },
+      {
+        "name": "DOT",
+        "count": 741463
+      },
+      {
+        "name": "DOC",
+        "count": 1375067
+      },
+      {
+        "name": "DOI",
+        "count": 1122427
+      },
+      {
+        "name": "EPA",
+        "count": 1799750
+      },
+      {
+        "name": "NASA",
+        "count": 5294158
+      },
+      {
+        "name": "CORP/CNCS",
+        "count": 2026443
+      },
+      {
+        "name": "SSA",
+        "count": 19660
+      },
+      {
+        "name": "HUD",
+        "count": 925699
+      },
+      {
+        "name": "NSF",
+        "count": 1521322
+      },
+      {
+        "name": "NARA",
+        "count": 634049
+      },
+      {
+        "name": "SBA",
+        "count": 2500682
+      },
+      {
+        "name": "DOJ",
+        "count": 4904065
+      },
+      {
+        "name": "DOL",
+        "count": 669920
+      },
+      {
+        "name": "DHS",
+        "count": 6682233
+      },
+      {
+        "name": "ED",
+        "count": 31381
+      },
+      {
+        "name": "EIB/USEIB",
+        "count": 1206031
+      },
+      {
+        "name": "ONDCP",
+        "count": 64684
+      },
+      {
+        "name": "PC",
+        "count": 272865
+      },
+      {
+        "name": "EAC",
+        "count": 42468
+      },
+      {
+        "name": "Gulf Restoration Council",
+        "count": 322
+      },
+      {
+        "name": "OMB",
+        "count": 3889016
+      },
+      {
+        "name": "FTC",
+        "count": 5206076
+      },
+      {
+        "name": "CPSC",
+        "count": 6671754
+      },
+      {
+        "name": "IJC",
+        "count": 34612
+      },
+      {
+        "name": "USAGM",
+        "count": 767158
+      },
+      {
+        "name": "DFC",
+        "count": 233474
+      },
+      {
+        "name": "FSGB",
+        "count": 55199
+      },
+      {
+        "name": "IAF",
+        "count": 215654
+      },
+      {
+        "name": "IBWC",
+        "count": 182308
+      },
+      {
+        "name": "USIDCA",
+        "count": 83470
+      },
+      {
+        "name": "MCC",
+        "count": 110483
+      },
+      {
+        "name": "FLRA",
+        "count": 271423
+      },
+      {
+        "name": "Disputes Panel",
+        "count": 505546
+      },
+      {
+        "name": "FSLRB",
+        "count": 505546
+      },
+      {
+        "name": "USADF",
+        "count": 273081
+      },
+      {
+        "name": "JUSFC",
+        "count": 30906
+      },
+      {
+        "name": "USIP",
+        "count": 31195
+      },
+      {
+        "name": "PCLOB",
+        "count": 40512
+      },
+      {
+        "name": "ABMC",
+        "count": 49428
+      },
+      {
+        "name": "SI",
+        "count": 12069
+      },
+      {
+        "name": "LOC",
+        "count": 56079
+      },
+      {
+        "name": "ACHP",
+        "count": 141309
+      },
+      {
+        "name": "PADC",
+        "count": 160344
+      },
+      {
+        "name": "PT",
+        "count": 199782
+      },
+      {
+        "name": "FMC",
+        "count": 1059847
+      },
+      {
+        "name": "ATBCB",
+        "count": 658773
+      },
+      {
+        "name": "OCNMT",
+        "count": 2304
+      },
+      {
+        "name": "Udall Foundation",
+        "count": 35613
+      },
+      {
+        "name": "WRC",
+        "count": 367016
+      },
+      {
+        "name": "SRBC",
+        "count": 335010
+      },
+      {
+        "name": "TVA",
+        "count": 1186429
+      },
+      {
+        "name": "SSS",
+        "count": 1020500
+      },
+      {
+        "name": "ODNI",
+        "count": 537366
+      },
+      {
+        "name": "NCD",
+        "count": 141360
+      },
+      {
+        "name": "DRBC",
+        "count": 383146
+      },
+      {
+        "name": "NCTC",
+        "count": 529724
+      },
+      {
+        "name": "CIA",
+        "count": 785460
+      },
+      {
+        "name": "OMSN",
+        "count": 95524
+      },
+      {
+        "name": "OVPUS",
+        "count": 84292
+      },
+      {
+        "name": "ESGLB",
+        "count": 77592
+      },
+      {
+        "name": "EOGGLB",
+        "count": 79152
+      },
+      {
+        "name": "CRC",
+        "count": 300625
+      },
+      {
+        "name": "OPM",
+        "count": 12724962
+      },
+      {
+        "name": "DC",
+        "count": 69125
+      },
+      {
+        "name": "USPS",
+        "count": 1687663
+      },
+      {
+        "name": "PRC",
+        "count": 713363
+      },
+      {
+        "name": "ONHIR",
+        "count": 174335
+      },
+      {
+        "name": "NEIGHBOR",
+        "count": 14336
+      },
+      {
+        "name": "ARTS",
+        "count": 1264592
+      },
+      {
+        "name": "LSC",
+        "count": 797835
+      },
+      {
+        "name": "NCLIS",
+        "count": 116200
+      },
+      {
+        "name": "HST",
+        "count": 116125
+      },
+      {
+        "name": "CFA",
+        "count": 207560
+      },
+      {
+        "name": "ARCTIC",
+        "count": 45600
+      },
+      {
+        "name": "JMMFF",
+        "count": 124850
+      },
+      {
+        "name": "AFRH",
+        "count": 102283
+      },
+      {
+        "name": "CFTC",
+        "count": 17092155
+      },
+      {
+        "name": "SEC",
+        "count": 29034086
+      },
+      {
+        "name": "ATSB",
+        "count": 73950
+      },
+      {
+        "name": "FEC",
+        "count": 422574
+      },
+      {
+        "name": "URMCC",
+        "count": 68286
+      },
+      {
+        "name": "ITC",
+        "count": 604300
+      },
+      {
+        "name": "MSPB",
+        "count": 791775
+      },
+      {
+        "name": "IOELB",
+        "count": 24025
+      },
+      {
+        "name": "FRTIB",
+        "count": 905457
+      },
+      {
+        "name": "OSC",
+        "count": 181053
+      },
+      {
+        "name": "ARC",
+        "count": 975
+      },
+      {
+        "name": "OGE",
+        "count": 1956926
+      },
+      {
+        "name": "FDIC",
+        "count": 25918811
+      },
+      {
+        "name": "FCC",
+        "count": 87824278
+      },
+      {
+        "name": "FCSIC",
+        "count": 822433
+      },
+      {
+        "name": "FCA",
+        "count": 10104785
+      },
+      {
+        "name": "ICC",
+        "count": 11200
+      },
+      {
+        "name": "GSA",
+        "count": 2879218
+      },
+      {
+        "name": "NLRB",
+        "count": 9750
+      },
+      {
+        "name": "EEOC",
+        "count": 8175
+      },
+      {
+        "name": "CSOSA",
+        "count": 100627
+      },
+      {
+        "name": "MSHFRC",
+        "count": 14000
+      },
+      {
+        "name": "FHFA",
+        "count": 10310798
+      },
+      {
+        "name": "SIGAR",
+        "count": 134100
+      },
+      {
+        "name": "CFPB",
+        "count": 41765760
+      },
+      {
+        "name": "NCUA",
+        "count": 15382371
+      },
+      {
+        "name": "CIGIE",
+        "count": 158400
+      },
+      {
+        "name": "Military Compensation and Retirement Modernization Commission",
+        "count": 45350
+      },
+      {
+        "name": "NMB",
+        "count": 5800
+      },
+      {
+        "name": "CPPBSD",
+        "count": 86364
+      },
+      {
+        "name": "FPRS",
+        "count": 36
+      },
+      {
+        "name": "FPMRS",
+        "count": 1358172
+      },
+      {
+        "name": "FASC",
+        "count": 36
+      },
+      {
+        "name": "FTRS",
+        "count": 329345
+      },
+      {
+        "name": "OIC",
+        "count": 51344
+      },
+      {
+        "name": "NCPPCC",
+        "count": 23504
+      },
+      {
+        "name": "AMTRAK",
+        "count": 236283
+      },
+      {
+        "name": "NTSB",
+        "count": 1370341
+      },
+      {
+        "name": "STB",
+        "count": 7616410
+      },
+      {
+        "name": "MMC",
+        "count": 637140
+      },
+      {
+        "name": "FARC",
+        "count": 26999248
+      },
+      {
+        "name": "FRS",
+        "count": 57631859
+      },
+      {
+        "name": "FFB",
+        "count": 111774
+      },
+      {
+        "name": "FFIEC",
+        "count": 827424
+      },
+      {
+        "name": "FSOC",
+        "count": 1026753
+      },
+      {
+        "name": "FirstNet",
+        "count": 66857
+      }
+    ]
+  },
+  {
+    "year": "2018",
+    "agencies": [
+      {
+        "name": "GAO",
+        "count": 55770
+      },
+      {
+        "name": "NRC",
+        "count": 633798
+      },
+      {
+        "name": "HHS",
+        "count": 8313107
+      },
+      {
+        "name": "USDA",
+        "count": 812429
+      },
+      {
+        "name": "DOS",
+        "count": 4815115
+      },
+      {
+        "name": "USAID",
+        "count": 3513060
+      },
+      {
+        "name": "VA",
+        "count": 22226864
+      },
+      {
+        "name": "DOE",
+        "count": 4174605
+      },
+      {
+        "name": "TREAS",
+        "count": 1718380
+      },
+      {
+        "name": "DOD",
+        "count": 46726969
+      },
+      {
+        "name": "DOT",
+        "count": 611273
+      },
+      {
+        "name": "DOC",
+        "count": 1135103
+      },
+      {
+        "name": "DOI",
+        "count": 914601
+      },
+      {
+        "name": "EPA",
+        "count": 1440512
+      },
+      {
+        "name": "NASA",
+        "count": 5552307
+      },
+      {
+        "name": "CORP/CNCS",
+        "count": 1390736
+      },
+      {
+        "name": "SSA",
+        "count": 13452
+      },
+      {
+        "name": "HUD",
+        "count": 725153
+      },
+      {
+        "name": "NSF",
+        "count": 1027077
+      },
+      {
+        "name": "NARA",
+        "count": 1466954
+      },
+      {
+        "name": "SBA",
+        "count": 2656264
+      },
+      {
+        "name": "DOJ",
+        "count": 6362883
+      },
+      {
+        "name": "DOL",
+        "count": 576789
+      },
+      {
+        "name": "DHS",
+        "count": 2297033
+      },
+      {
+        "name": "ED",
+        "count": 15964
+      },
+      {
+        "name": "EIB/USEIB",
+        "count": 1326249
+      },
+      {
+        "name": "ONDCP",
+        "count": 86672
+      },
+      {
+        "name": "PC",
+        "count": 255350
+      },
+      {
+        "name": "EAC",
+        "count": 38870
+      },
+      {
+        "name": "Gulf Restoration Council",
+        "count": 46
+      },
+      {
+        "name": "OMB",
+        "count": 2918035
+      },
+      {
+        "name": "USIP",
+        "count": 29360
+      },
+      {
+        "name": "ONHIR",
+        "count": 249050
+      },
+      {
+        "name": "CRC",
+        "count": 206260
+      },
+      {
+        "name": "OPM",
+        "count": 11026067
+      },
+      {
+        "name": "DC",
+        "count": 47005
+      },
+      {
+        "name": "ARTS",
+        "count": 799289
+      },
+      {
+        "name": "LSC",
+        "count": 542059
+      },
+      {
+        "name": "NCLIS",
+        "count": 79016
+      },
+      {
+        "name": "HST",
+        "count": 78965
+      },
+      {
+        "name": "CFA",
+        "count": 92242
+      },
+      {
+        "name": "ARCTIC",
+        "count": 31008
+      },
+      {
+        "name": "JMMFF",
+        "count": 84898
+      },
+      {
+        "name": "AFRH",
+        "count": 108834
+      },
+      {
+        "name": "ATSB",
+        "count": 97614
+      },
+      {
+        "name": "OIC",
+        "count": 70598
+      },
+      {
+        "name": "CSOSA",
+        "count": 133474
+      },
+      {
+        "name": "NCPPCC",
+        "count": 32318
+      },
+      {
+        "name": "IJC",
+        "count": 32576
+      },
+      {
+        "name": "USAGM",
+        "count": 708288
+      },
+      {
+        "name": "DFC",
+        "count": 225114
+      },
+      {
+        "name": "FSGB",
+        "count": 51952
+      },
+      {
+        "name": "PCLOB",
+        "count": 20112
+      },
+      {
+        "name": "IAF",
+        "count": 202762
+      },
+      {
+        "name": "IBWC",
+        "count": 171584
+      },
+      {
+        "name": "USIDCA",
+        "count": 78560
+      },
+      {
+        "name": "MCC",
+        "count": 94816
+      },
+      {
+        "name": "ESGLB",
+        "count": 84058
+      },
+      {
+        "name": "EOGGLB",
+        "count": 85748
+      },
+      {
+        "name": "FLRA",
+        "count": 254316
+      },
+      {
+        "name": "Disputes Panel",
+        "count": 475808
+      },
+      {
+        "name": "FSLRB",
+        "count": 475808
+      },
+      {
+        "name": "USADF",
+        "count": 256240
+      },
+      {
+        "name": "JUSFC",
+        "count": 29088
+      },
+      {
+        "name": "ITC",
+        "count": 1072548
+      },
+      {
+        "name": "WRC",
+        "count": 423480
+      },
+      {
+        "name": "SRBC",
+        "count": 382170
+      },
+      {
+        "name": "TVA",
+        "count": 1348643
+      },
+      {
+        "name": "DRBC",
+        "count": 442062
+      },
+      {
+        "name": "SSS",
+        "count": 824250
+      },
+      {
+        "name": "ODNI",
+        "count": 478552
+      },
+      {
+        "name": "NCTC",
+        "count": 427854
+      },
+      {
+        "name": "CIA",
+        "count": 634410
+      },
+      {
+        "name": "OMSN",
+        "count": 77154
+      },
+      {
+        "name": "OVPUS",
+        "count": 68082
+      },
+      {
+        "name": "FTC",
+        "count": 6687810
+      },
+      {
+        "name": "CPSC",
+        "count": 8486814
+      },
+      {
+        "name": "MSPB",
+        "count": 696762
+      },
+      {
+        "name": "IOELB",
+        "count": 21142
+      },
+      {
+        "name": "FRTIB",
+        "count": 796908
+      },
+      {
+        "name": "OSC",
+        "count": 159566
+      },
+      {
+        "name": "ARC",
+        "count": 858
+      },
+      {
+        "name": "OGE",
+        "count": 1713782
+      },
+      {
+        "name": "FDIC",
+        "count": 31266776
+      },
+      {
+        "name": "FCC",
+        "count": 113443540
+      },
+      {
+        "name": "FCSIC",
+        "count": 901872
+      },
+      {
+        "name": "FCA",
+        "count": 11091997
+      },
+      {
+        "name": "SEC",
+        "count": 30299716
+      },
+      {
+        "name": "FEC",
+        "count": 421504
+      },
+      {
+        "name": "ICC",
+        "count": 9856
+      },
+      {
+        "name": "CFTC",
+        "count": 18173208
+      },
+      {
+        "name": "PRC",
+        "count": 758267
+      },
+      {
+        "name": "GSA",
+        "count": 2444471
+      },
+      {
+        "name": "USPS",
+        "count": 1887978
+      },
+      {
+        "name": "NLRB",
+        "count": 8580
+      },
+      {
+        "name": "EEOC",
+        "count": 7194
+      },
+      {
+        "name": "MSHFRC",
+        "count": 12320
+      },
+      {
+        "name": "FHFA",
+        "count": 11037192
+      },
+      {
+        "name": "SIGAR",
+        "count": 118008
+      },
+      {
+        "name": "CFPB",
+        "count": 43634729
+      },
+      {
+        "name": "NCUA",
+        "count": 17341790
+      },
+      {
+        "name": "CIGIE",
+        "count": 113937
+      },
+      {
+        "name": "Military Compensation and Retirement Modernization Commission",
+        "count": 39908
+      },
+      {
+        "name": "NCD",
+        "count": 124034
+      },
+      {
+        "name": "NMB",
+        "count": 1160
+      },
+      {
+        "name": "ABMC",
+        "count": 102642
+      },
+      {
+        "name": "SI",
+        "count": 28161
+      },
+      {
+        "name": "LOC",
+        "count": 130851
+      },
+      {
+        "name": "ACHP",
+        "count": 329721
+      },
+      {
+        "name": "PADC",
+        "count": 374136
+      },
+      {
+        "name": "PT",
+        "count": 441822
+      },
+      {
+        "name": "ATBCB",
+        "count": 1536920
+      },
+      {
+        "name": "OCNMT",
+        "count": 5376
+      },
+      {
+        "name": "Udall Foundation",
+        "count": 83097
+      },
+      {
+        "name": "NEIGHBOR",
+        "count": 32768
+      },
+      {
+        "name": "FMC",
+        "count": 1638791
+      },
+      {
+        "name": "CPPBSD",
+        "count": 115152
+      },
+      {
+        "name": "FPRS",
+        "count": 48
+      },
+      {
+        "name": "FPMRS",
+        "count": 1815584
+      },
+      {
+        "name": "FASC",
+        "count": 48
+      },
+      {
+        "name": "FTRS",
+        "count": 439620
+      },
+      {
+        "name": "URMCC",
+        "count": 68286
+      },
+      {
+        "name": "ACFR",
+        "count": 6225
+      },
+      {
+        "name": "ACUS",
+        "count": 5721
+      },
+      {
+        "name": "NCEP",
+        "count": 10663
+      },
+      {
+        "name": "NCMNPS",
+        "count": 13476
+      },
+      {
+        "name": "NCPC",
+        "count": 22508
+      },
+      {
+        "name": "PCWHF",
+        "count": 9470
+      },
+      {
+        "name": "MMC",
+        "count": 837384
+      },
+      {
+        "name": "FARC",
+        "count": 22297466
+      },
+      {
+        "name": "AMTRAK",
+        "count": 268846
+      },
+      {
+        "name": "NTSB",
+        "count": 1558402
+      },
+      {
+        "name": "STB",
+        "count": 8670359
+      },
+      {
+        "name": "FRS",
+        "count": 62620086
+      },
+      {
+        "name": "FFB",
+        "count": 123238
+      },
+      {
+        "name": "FFIEC",
+        "count": 911778
+      },
+      {
+        "name": "FSOC",
+        "count": 1130900
+      },
+      {
+        "name": "FirstNet",
+        "count": 85880
+      }
+    ]
+  },
+  {
+    "year": "2020",
+    "agencies": [
+      {
+        "name": "HHS",
+        "count": 17951113
+      },
+      {
+        "name": "USDA",
+        "count": 858440
+      },
+      {
+        "name": "DOS",
+        "count": 6256959
+      },
+      {
+        "name": "USAID",
+        "count": 4064134
+      },
+      {
+        "name": "VA",
+        "count": 16116476
+      },
+      {
+        "name": "DOE",
+        "count": 4413050
+      },
+      {
+        "name": "TREAS",
+        "count": 2502790
+      },
+      {
+        "name": "DOD",
+        "count": 32976139
+      },
+      {
+        "name": "DOT",
+        "count": 627046
+      },
+      {
+        "name": "DOC",
+        "count": 1145542
+      },
+      {
+        "name": "DOI",
+        "count": 951102
+      },
+      {
+        "name": "EPA",
+        "count": 1529302
+      },
+      {
+        "name": "NASA",
+        "count": 5626647
+      },
+      {
+        "name": "NRC",
+        "count": 646580
+      },
+      {
+        "name": "CORP/CNCS",
+        "count": 3091384
+      },
+      {
+        "name": "SSA",
+        "count": 17568
+      },
+      {
+        "name": "HUD",
+        "count": 801841
+      },
+      {
+        "name": "NSF",
+        "count": 2276078
+      },
+      {
+        "name": "NARA",
+        "count": 1419220
+      },
+      {
+        "name": "SBA",
+        "count": 7622390
+      },
+      {
+        "name": "DOJ",
+        "count": 10853219
+      },
+      {
+        "name": "DOL",
+        "count": 680217
+      },
+      {
+        "name": "DHS",
+        "count": 7387774
+      },
+      {
+        "name": "ED",
+        "count": 40501
+      },
+      {
+        "name": "EIB/USEIB",
+        "count": 1377716
+      },
+      {
+        "name": "ONDCP",
+        "count": 120035
+      },
+      {
+        "name": "PC",
+        "count": 357636
+      },
+      {
+        "name": "EAC",
+        "count": 14342
+      },
+      {
+        "name": "Gulf Restoration Council",
+        "count": 368
+      },
+      {
+        "name": "OMB",
+        "count": 3748091
+      },
+      {
+        "name": "DRBC",
+        "count": 352149
+      },
+      {
+        "name": "WRC",
+        "count": 338784
+      },
+      {
+        "name": "SRBC",
+        "count": 309828
+      },
+      {
+        "name": "TVA",
+        "count": 1159867
+      },
+      {
+        "name": "USPS",
+        "count": 2539937
+      },
+      {
+        "name": "FPRS",
+        "count": 102
+      },
+      {
+        "name": "FPMRS",
+        "count": 3852320
+      },
+      {
+        "name": "FASC",
+        "count": 170
+      },
+      {
+        "name": "FTRS",
+        "count": 930503
+      },
+      {
+        "name": "ABMC",
+        "count": 120414
+      },
+      {
+        "name": "SI",
+        "count": 26820
+      },
+      {
+        "name": "LOC",
+        "count": 125724
+      },
+      {
+        "name": "ACHP",
+        "count": 314020
+      },
+      {
+        "name": "PADC",
+        "count": 356320
+      },
+      {
+        "name": "PRC",
+        "count": 1130447
+      },
+      {
+        "name": "PT",
+        "count": 443960
+      },
+      {
+        "name": "ATBCB",
+        "count": 1471425
+      },
+      {
+        "name": "CFTC",
+        "count": 32611604
+      },
+      {
+        "name": "SEC",
+        "count": 56479081
+      },
+      {
+        "name": "ESGLB",
+        "count": 226310
+      },
+      {
+        "name": "CPPBSD",
+        "count": 258234
+      },
+      {
+        "name": "GSA",
+        "count": 3297970
+      },
+      {
+        "name": "EOGGLB",
+        "count": 230860
+      },
+      {
+        "name": "NEIGHBOR",
+        "count": 51200
+      },
+      {
+        "name": "CRC",
+        "count": 456216
+      },
+      {
+        "name": "OPM",
+        "count": 17609811
+      },
+      {
+        "name": "DC",
+        "count": 105070
+      },
+      {
+        "name": "ARTS",
+        "count": 1994784
+      },
+      {
+        "name": "FTC",
+        "count": 3927926
+      },
+      {
+        "name": "CPSC",
+        "count": 5016569
+      },
+      {
+        "name": "LSC",
+        "count": 1215550
+      },
+      {
+        "name": "NCLIS",
+        "count": 176624
+      },
+      {
+        "name": "HST",
+        "count": 176510
+      },
+      {
+        "name": "CFA",
+        "count": 400976
+      },
+      {
+        "name": "ARCTIC",
+        "count": 69312
+      },
+      {
+        "name": "OCNMT",
+        "count": 5120
+      },
+      {
+        "name": "Udall Foundation",
+        "count": 79140
+      },
+      {
+        "name": "JMMFF",
+        "count": 189772
+      },
+      {
+        "name": "NCD",
+        "count": 198842
+      },
+      {
+        "name": "AFRH",
+        "count": 102074
+      },
+      {
+        "name": "ATSB",
+        "count": 94656
+      },
+      {
+        "name": "URMCC",
+        "count": 147953
+      },
+      {
+        "name": "OIC",
+        "count": 121942
+      },
+      {
+        "name": "CSOSA",
+        "count": 248204
+      },
+      {
+        "name": "NCPPCC",
+        "count": 55822
+      },
+      {
+        "name": "IJC",
+        "count": 44792
+      },
+      {
+        "name": "USAGM",
+        "count": 946556
+      },
+      {
+        "name": "DFC",
+        "count": 267620
+      },
+      {
+        "name": "FSGB",
+        "count": 71434
+      },
+      {
+        "name": "IAF",
+        "count": 279574
+      },
+      {
+        "name": "IBWC",
+        "count": 235928
+      },
+      {
+        "name": "USIDCA",
+        "count": 108020
+      },
+      {
+        "name": "MCC",
+        "count": 142978
+      },
+      {
+        "name": "FLRA",
+        "count": 353974
+      },
+      {
+        "name": "Disputes Panel",
+        "count": 654236
+      },
+      {
+        "name": "FSLRB",
+        "count": 654236
+      },
+      {
+        "name": "USADF",
+        "count": 350206
+      },
+      {
+        "name": "JUSFC",
+        "count": 39996
+      },
+      {
+        "name": "USIP",
+        "count": 40370
+      },
+      {
+        "name": "SSS",
+        "count": 765375
+      },
+      {
+        "name": "ODNI",
+        "count": 386070
+      },
+      {
+        "name": "NCTC",
+        "count": 397293
+      },
+      {
+        "name": "CIA",
+        "count": 589095
+      },
+      {
+        "name": "OMSN",
+        "count": 71643
+      },
+      {
+        "name": "OVPUS",
+        "count": 63219
+      },
+      {
+        "name": "ITC",
+        "count": 1049924
+      },
+      {
+        "name": "ONHIR",
+        "count": 224145
+      },
+      {
+        "name": "MSPB",
+        "count": 1140156
+      },
+      {
+        "name": "IOELB",
+        "count": 34596
+      },
+      {
+        "name": "FRTIB",
+        "count": 1305627
+      },
+      {
+        "name": "OSC",
+        "count": 259956
+      },
+      {
+        "name": "ARC",
+        "count": 1404
+      },
+      {
+        "name": "OGE",
+        "count": 2837060
+      },
+      {
+        "name": "FDIC",
+        "count": 30758539
+      },
+      {
+        "name": "FCC",
+        "count": 103263640
+      },
+      {
+        "name": "FCSIC",
+        "count": 945017
+      },
+      {
+        "name": "FCA",
+        "count": 11572854
+      },
+      {
+        "name": "FEC",
+        "count": 117537
+      },
+      {
+        "name": "ICC",
+        "count": 16128
+      },
+      {
+        "name": "NLRB",
+        "count": 12537
+      },
+      {
+        "name": "EEOC",
+        "count": 11772
+      },
+      {
+        "name": "MSHFRC",
+        "count": 20160
+      },
+      {
+        "name": "FHFA",
+        "count": 12277465
+      },
+      {
+        "name": "SIGAR",
+        "count": 193104
+      },
+      {
+        "name": "CFPB",
+        "count": 48519545
+      },
+      {
+        "name": "NCUA",
+        "count": 17874399
+      },
+      {
+        "name": "CIGIE",
+        "count": 228096
+      },
+      {
+        "name": "Military Compensation and Retirement Modernization Commission",
+        "count": 65304
+      },
+      {
+        "name": "NMB",
+        "count": 8352
+      },
+      {
+        "name": "PCLOB",
+        "count": 40800
+      },
+      {
+        "name": "FMC",
+        "count": 1387896
+      },
+      {
+        "name": "AMTRAK",
+        "count": 277980
+      },
+      {
+        "name": "NTSB",
+        "count": 1612200
+      },
+      {
+        "name": "STB",
+        "count": 8988776
+      },
+      {
+        "name": "MMC",
+        "count": 800976
+      },
+      {
+        "name": "FARC",
+        "count": 22526970
+      },
+      {
+        "name": "FRS",
+        "count": 68803749
+      },
+      {
+        "name": "FFB",
+        "count": 127537
+      },
+      {
+        "name": "FFIEC",
+        "count": 944112
+      },
+      {
+        "name": "FSOC",
+        "count": 1385173
+      },
+      {
+        "name": "FirstNet",
+        "count": 77418
+      }
+    ]
+  },
+  {
+    "year": "2025",
+    "agencies": [
+      {
+        "name": "ARC",
+        "count": 228
+      },
+      {
+        "name": "AFRH",
+        "count": 20520
+      },
+      {
+        "name": "OGE",
+        "count": 497970
+      },
+      {
+        "name": "TREAS",
+        "count": 237984
+      },
+      {
+        "name": "FDIC",
+        "count": 3446757
+      },
+      {
+        "name": "CFTC",
+        "count": 2860311
+      },
+      {
+        "name": "SEC",
+        "count": 5170296
+      },
+      {
+        "name": "OPM",
+        "count": 2981185
+      },
+      {
+        "name": "MSPB",
+        "count": 191766
+      },
+      {
+        "name": "OMB",
+        "count": 479925
+      },
+      {
+        "name": "ODNI",
+        "count": 26520
+      },
+      {
+        "name": "IOELB",
+        "count": 5766
+      },
+      {
+        "name": "FRTIB",
+        "count": 222252
+      },
+      {
+        "name": "OSC",
+        "count": 44796
+      },
+      {
+        "name": "DOE",
+        "count": 472898
+      },
+      {
+        "name": "DOI",
+        "count": 91837
+      },
+      {
+        "name": "DOD",
+        "count": 1678757
+      },
+      {
+        "name": "DOJ",
+        "count": 673230
+      },
+      {
+        "name": "FCC",
+        "count": 11976946
+      },
+      {
+        "name": "FCSIC",
+        "count": 97578
+      },
+      {
+        "name": "FCA",
+        "count": 1171008
+      },
+      {
+        "name": "DFC",
+        "count": 36220
+      },
+      {
+        "name": "DHS",
+        "count": 1948682
+      },
+      {
+        "name": "FEC",
+        "count": 414964
+      },
+      {
+        "name": "DOL",
+        "count": 61344
+      },
+      {
+        "name": "NSF",
+        "count": 601626
+      },
+      {
+        "name": "HHS",
+        "count": 5148264
+      },
+      {
+        "name": "PRC",
+        "count": 118688
+      },
+      {
+        "name": "NLRB",
+        "count": 1848
+      },
+      {
+        "name": "FTC",
+        "count": 1605234
+      },
+      {
+        "name": "NRC",
+        "count": 68858
+      },
+      {
+        "name": "FLRA",
+        "count": 49032
+      },
+      {
+        "name": "DOT",
+        "count": 135950
+      },
+      {
+        "name": "EIB/USEIB",
+        "count": 160318
+      },
+      {
+        "name": "ED",
+        "count": 6214
+      },
+      {
+        "name": "EPA",
+        "count": 181012
+      },
+      {
+        "name": "GSA",
+        "count": 421334
+      },
+      {
+        "name": "NASA",
+        "count": 667078
+      },
+      {
+        "name": "USPS",
+        "count": 220050
+      },
+      {
+        "name": "EEOC",
+        "count": 1950
+      },
+      {
+        "name": "IAF",
+        "count": 38229
+      },
+      {
+        "name": "HUD",
+        "count": 85528
+      },
+      {
+        "name": "NARA",
+        "count": 229146
+      },
+      {
+        "name": "CRC",
+        "count": 118690
+      },
+      {
+        "name": "TVA",
+        "count": 307533
+      },
+      {
+        "name": "CSOSA",
+        "count": 16558
+      },
+      {
+        "name": "CPSC",
+        "count": 2007982
+      },
+      {
+        "name": "USDA",
+        "count": 50689
+      },
+      {
+        "name": "MSHFRC",
+        "count": 3348
+      },
+      {
+        "name": "FHFA",
+        "count": 1564335
+      },
+      {
+        "name": "SIGAR",
+        "count": 32160
+      },
+      {
+        "name": "CFPB",
+        "count": 5279374
+      },
+      {
+        "name": "NCUA",
+        "count": 1912290
+      },
+      {
+        "name": "CIGIE",
+        "count": 41370
+      },
+      {
+        "name": "Military Compensation and Retirement Modernization Commission",
+        "count": 10872
+      },
+      {
+        "name": "NCD",
+        "count": 32817
+      },
+      {
+        "name": "NMB",
+        "count": 1386
+      },
+      {
+        "name": "FMCS",
+        "count": 2466
+      },
+      {
+        "name": "FMC",
+        "count": 660336
+      },
+      {
+        "name": "ATSB",
+        "count": 14795
+      },
+      {
+        "name": "NCLIS",
+        "count": 46420
+      },
+      {
+        "name": "HST",
+        "count": 46410
+      },
+      {
+        "name": "CFA",
+        "count": 105480
+      },
+      {
+        "name": "ARCTIC",
+        "count": 18220
+      },
+      {
+        "name": "JMMFF",
+        "count": 49910
+      },
+      {
+        "name": "CORP/CNCS",
+        "count": 885298
+      },
+      {
+        "name": "ITC",
+        "count": 319388
+      },
+      {
+        "name": "DRBC",
+        "count": 92214
+      },
+      {
+        "name": "WRC",
+        "count": 84642
+      },
+      {
+        "name": "SRBC",
+        "count": 80670
+      },
+      {
+        "name": "ONHIR",
+        "count": 74718
+      },
+      {
+        "name": "NEIGHBOR",
+        "count": 14329
+      },
+      {
+        "name": "DC",
+        "count": 27640
+      },
+      {
+        "name": "ARTS",
+        "count": 589020
+      },
+      {
+        "name": "LSC",
+        "count": 324710
+      },
+      {
+        "name": "ABMC",
+        "count": 18327
+      },
+      {
+        "name": "SI",
+        "count": 4014
+      },
+      {
+        "name": "LOC",
+        "count": 18435
+      },
+      {
+        "name": "ACHP",
+        "count": 47085
+      },
+      {
+        "name": "PADC",
+        "count": 53418
+      },
+      {
+        "name": "PT",
+        "count": 66564
+      },
+      {
+        "name": "ATBCB",
+        "count": 245310
+      },
+      {
+        "name": "OCNMT",
+        "count": 765
+      },
+      {
+        "name": "Udall Foundation",
+        "count": 11868
+      },
+      {
+        "name": "EAC",
+        "count": 38888
+      },
+      {
+        "name": "DOS",
+        "count": 826038
+      },
+      {
+        "name": "USAID",
+        "count": 503870
+      },
+      {
+        "name": "PC",
+        "count": 61814
+      },
+      {
+        "name": "IJC",
+        "count": 6105
+      },
+      {
+        "name": "USAGM",
+        "count": 98820
+      },
+      {
+        "name": "FSGB",
+        "count": 9708
+      },
+      {
+        "name": "IBWC",
+        "count": 32157
+      },
+      {
+        "name": "USIDCA",
+        "count": 14721
+      },
+      {
+        "name": "MCC",
+        "count": 19482
+      },
+      {
+        "name": "Disputes Panel",
+        "count": 89136
+      },
+      {
+        "name": "FSLRB",
+        "count": 89136
+      },
+      {
+        "name": "USADF",
+        "count": 47527
+      },
+      {
+        "name": "JUSFC",
+        "count": 5451
+      },
+      {
+        "name": "USIP",
+        "count": 5499
+      },
+      {
+        "name": "SSS",
+        "count": 49840
+      },
+      {
+        "name": "NCTC",
+        "count": 20358
+      },
+      {
+        "name": "CIA",
+        "count": 30024
+      },
+      {
+        "name": "OMSN",
+        "count": 3670
+      },
+      {
+        "name": "OVPUS",
+        "count": 3238
+      },
+      {
+        "name": "SBA",
+        "count": 934626
+      },
+      {
+        "name": "ESGLB",
+        "count": 25860
+      },
+      {
+        "name": "EOGGLB",
+        "count": 26384
+      },
+      {
+        "name": "CPPBSD",
+        "count": 50397
+      },
+      {
+        "name": "FASC",
+        "count": 17460
+      },
+      {
+        "name": "FPRS",
+        "count": 18
+      },
+      {
+        "name": "FPMRS",
+        "count": 680355
+      },
+      {
+        "name": "FTRS",
+        "count": 162490
+      },
+      {
+        "name": "OIC",
+        "count": 6416
+      },
+      {
+        "name": "NCPPCC",
+        "count": 2932
+      },
+      {
+        "name": "VA",
+        "count": 3715861
+      },
+      {
+        "name": "URMCC",
+        "count": 45512
+      },
+      {
+        "name": "DOC",
+        "count": 117837
+      },
+      {
+        "name": "SSA",
+        "count": 1909
+      },
+      {
+        "name": "ONDCP",
+        "count": 22385
+      },
+      {
+        "name": "Gulf Restoration Council",
+        "count": 46
+      },
+      {
+        "name": "PCLOB",
+        "count": 5096
+      },
+      {
+        "name": "MMC",
+        "count": 48488
+      },
+      {
+        "name": "FRS",
+        "count": 7649070
+      },
+      {
+        "name": "FFB",
+        "count": 12870
+      },
+      {
+        "name": "FFIEC",
+        "count": 100260
+      },
+      {
+        "name": "FSOC",
+        "count": 99306
+      },
+      {
+        "name": "FirstNet",
+        "count": 8349
+      },
+      {
+        "name": "AMTRAK",
+        "count": 50941
+      },
+      {
+        "name": "NTSB",
+        "count": 295141
+      },
+      {
+        "name": "STB",
+        "count": 1740295
+      },
+      {
+        "name": "FARC",
+        "count": 2415117
+      }
+    ]
+  },
+  {
+    "year": "2012",
+    "agencies": [
+      {
+        "name": "GAO",
+        "count": 27650
+      }
+    ]
+  },
+  {
+    "year": "2023",
+    "agencies": [
+      {
+        "name": "USPS",
+        "count": 1815777
+      },
+      {
+        "name": "PRC",
+        "count": 901047
+      },
+      {
+        "name": "NCD",
+        "count": 216186
+      },
+      {
+        "name": "HUD",
+        "count": 903411
+      },
+      {
+        "name": "NEIGHBOR",
+        "count": 30713
+      },
+      {
+        "name": "TREAS",
+        "count": 1612628
+      },
+      {
+        "name": "DRBC",
+        "count": 288185
+      },
+      {
+        "name": "WRC",
+        "count": 268087
+      },
+      {
+        "name": "SRBC",
+        "count": 248265
+      },
+      {
+        "name": "TVA",
+        "count": 979485
+      },
+      {
+        "name": "DOL",
+        "count": 736565
+      },
+      {
+        "name": "CPPBSD",
+        "count": 257765
+      },
+      {
+        "name": "GSA",
+        "count": 3543023
+      },
+      {
+        "name": "DOE",
+        "count": 4907690
+      },
+      {
+        "name": "DOI",
+        "count": 930592
+      },
+      {
+        "name": "SSS",
+        "count": 456590
+      },
+      {
+        "name": "ODNI",
+        "count": 261312
+      },
+      {
+        "name": "NCTC",
+        "count": 234165
+      },
+      {
+        "name": "CIA",
+        "count": 346037
+      },
+      {
+        "name": "OMSN",
+        "count": 42217
+      },
+      {
+        "name": "OVPUS",
+        "count": 37249
+      },
+      {
+        "name": "DOD",
+        "count": 18684343
+      },
+      {
+        "name": "SBA",
+        "count": 6064060
+      },
+      {
+        "name": "ESGLB",
+        "count": 174558
+      },
+      {
+        "name": "EOGGLB",
+        "count": 178092
+      },
+      {
+        "name": "NASA",
+        "count": 6708118
+      },
+      {
+        "name": "PCLOB",
+        "count": 25492
+      },
+      {
+        "name": "ATSB",
+        "count": 142021
+      },
+      {
+        "name": "DHS",
+        "count": 5183744
+      },
+      {
+        "name": "CFTC",
+        "count": 18873598
+      },
+      {
+        "name": "SEC",
+        "count": 33114541
+      },
+      {
+        "name": "FTC",
+        "count": 6014656
+      },
+      {
+        "name": "CPSC",
+        "count": 7678900
+      },
+      {
+        "name": "VA",
+        "count": 24617277
+      },
+      {
+        "name": "AFRH",
+        "count": 138645
+      },
+      {
+        "name": "EPA",
+        "count": 1940030
+      },
+      {
+        "name": "DOJ",
+        "count": 6026122
+      },
+      {
+        "name": "FASC",
+        "count": 93148
+      },
+      {
+        "name": "FPRS",
+        "count": 96
+      },
+      {
+        "name": "FPMRS",
+        "count": 3618435
+      },
+      {
+        "name": "FTRS",
+        "count": 848220
+      },
+      {
+        "name": "NSF",
+        "count": 1548210
+      },
+      {
+        "name": "DOS",
+        "count": 8693205
+      },
+      {
+        "name": "USAID",
+        "count": 5308118
+      },
+      {
+        "name": "PC",
+        "count": 576848
+      },
+      {
+        "name": "IJC",
+        "count": 65124
+      },
+      {
+        "name": "USAGM",
+        "count": 1329546
+      },
+      {
+        "name": "DFC",
+        "count": 380088
+      },
+      {
+        "name": "FSGB",
+        "count": 103596
+      },
+      {
+        "name": "IAF",
+        "count": 405045
+      },
+      {
+        "name": "IBWC",
+        "count": 343028
+      },
+      {
+        "name": "USIDCA",
+        "count": 157036
+      },
+      {
+        "name": "MCC",
+        "count": 207828
+      },
+      {
+        "name": "FLRA",
+        "count": 507458
+      },
+      {
+        "name": "Disputes Panel",
+        "count": 950888
+      },
+      {
+        "name": "FSLRB",
+        "count": 950888
+      },
+      {
+        "name": "USADF",
+        "count": 507222
+      },
+      {
+        "name": "JUSFC",
+        "count": 58148
+      },
+      {
+        "name": "USIP",
+        "count": 58664
+      },
+      {
+        "name": "FEC",
+        "count": 326341
+      },
+      {
+        "name": "ICC",
+        "count": 19232
+      },
+      {
+        "name": "HHS",
+        "count": 13249333
+      },
+      {
+        "name": "NRC",
+        "count": 738105
+      },
+      {
+        "name": "DOT",
+        "count": 1482299
+      },
+      {
+        "name": "EIB/USEIB",
+        "count": 856729
+      },
+      {
+        "name": "ED",
+        "count": 34081
+      },
+      {
+        "name": "OPM",
+        "count": 21217684
+      },
+      {
+        "name": "MSPB",
+        "count": 1358554
+      },
+      {
+        "name": "OMB",
+        "count": 3899089
+      },
+      {
+        "name": "IOELB",
+        "count": 41323
+      },
+      {
+        "name": "FRTIB",
+        "count": 1593712
+      },
+      {
+        "name": "OSC",
+        "count": 321133
+      },
+      {
+        "name": "CRC",
+        "count": 307023
+      },
+      {
+        "name": "ARC",
+        "count": 1645
+      },
+      {
+        "name": "OGE",
+        "count": 3387086
+      },
+      {
+        "name": "FDIC",
+        "count": 16228529
+      },
+      {
+        "name": "FCC",
+        "count": 113363116
+      },
+      {
+        "name": "FCSIC",
+        "count": 530220
+      },
+      {
+        "name": "FCA",
+        "count": 6241101
+      },
+      {
+        "name": "DC",
+        "count": 69107
+      },
+      {
+        "name": "ARTS",
+        "count": 1488820
+      },
+      {
+        "name": "CORP/CNCS",
+        "count": 2067190
+      },
+      {
+        "name": "LSC",
+        "count": 809463
+      },
+      {
+        "name": "NLRB",
+        "count": 13255
+      },
+      {
+        "name": "EEOC",
+        "count": 13997
+      },
+      {
+        "name": "NCLIS",
+        "count": 116092
+      },
+      {
+        "name": "HST",
+        "count": 116053
+      },
+      {
+        "name": "CFA",
+        "count": 263728
+      },
+      {
+        "name": "ARCTIC",
+        "count": 45564
+      },
+      {
+        "name": "JMMFF",
+        "count": 124796
+      },
+      {
+        "name": "NARA",
+        "count": 1192855
+      },
+      {
+        "name": "CSOSA",
+        "count": 158913
+      },
+      {
+        "name": "USDA",
+        "count": 927594
+      },
+      {
+        "name": "MSHFRC",
+        "count": 24016
+      },
+      {
+        "name": "FHFA",
+        "count": 8125734
+      },
+      {
+        "name": "SIGAR",
+        "count": 230524
+      },
+      {
+        "name": "CFPB",
+        "count": 27291871
+      },
+      {
+        "name": "NCUA",
+        "count": 10078316
+      },
+      {
+        "name": "CIGIE",
+        "count": 296518
+      },
+      {
+        "name": "Military Compensation and Retirement Modernization Commission",
+        "count": 77938
+      },
+      {
+        "name": "NMB",
+        "count": 9944
+      },
+      {
+        "name": "ITC",
+        "count": 893019
+      },
+      {
+        "name": "ABMC",
+        "count": 97759
+      },
+      {
+        "name": "SI",
+        "count": 21417
+      },
+      {
+        "name": "LOC",
+        "count": 98335
+      },
+      {
+        "name": "ACHP",
+        "count": 251138
+      },
+      {
+        "name": "PADC",
+        "count": 284926
+      },
+      {
+        "name": "PT",
+        "count": 355038
+      },
+      {
+        "name": "ATBCB",
+        "count": 1242913
+      },
+      {
+        "name": "OCNMT",
+        "count": 4083
+      },
+      {
+        "name": "Udall Foundation",
+        "count": 63299
+      },
+      {
+        "name": "OIC",
+        "count": 64164
+      },
+      {
+        "name": "NCPPCC",
+        "count": 29332
+      },
+      {
+        "name": "FMC",
+        "count": 2337769
+      },
+      {
+        "name": "FMCS",
+        "count": 24
+      },
+      {
+        "name": "EAC",
+        "count": 30480
+      },
+      {
+        "name": "URMCC",
+        "count": 159304
+      },
+      {
+        "name": "DOC",
+        "count": 1292975
+      },
+      {
+        "name": "SSA",
+        "count": 16366
+      },
+      {
+        "name": "ONDCP",
+        "count": 303838
+      },
+      {
+        "name": "Gulf Restoration Council",
+        "count": 156
+      },
+      {
+        "name": "ONHIR",
+        "count": 199240
+      },
+      {
+        "name": "FARC",
+        "count": 26206350
+      },
+      {
+        "name": "AMTRAK",
+        "count": 176000
+      },
+      {
+        "name": "NTSB",
+        "count": 1018742
+      },
+      {
+        "name": "STB",
+        "count": 5794215
+      },
+      {
+        "name": "FRS",
+        "count": 38398856
+      },
+      {
+        "name": "FFB",
+        "count": 68679
+      },
+      {
+        "name": "FFIEC",
+        "count": 534746
+      },
+      {
+        "name": "FSOC",
+        "count": 756754
+      },
+      {
+        "name": "MMC",
+        "count": 897259
+      },
+      {
+        "name": "FirstNet",
+        "count": 81213
+      }
+    ]
+  },
+  {
+    "year": "2016",
+    "agencies": [
+      {
+        "name": "ONHIR",
+        "count": 24905
+      },
+      {
+        "name": "DOT",
+        "count": 815
+      },
+      {
+        "name": "ONDCP",
+        "count": 1455
+      },
+      {
+        "name": "HHS",
+        "count": 421353
+      },
+      {
+        "name": "USDA",
+        "count": 8085
+      },
+      {
+        "name": "DOS",
+        "count": 230568
+      },
+      {
+        "name": "USAID",
+        "count": 88136
+      },
+      {
+        "name": "VA",
+        "count": 524717
+      },
+      {
+        "name": "DOE",
+        "count": 27343
+      },
+      {
+        "name": "TREAS",
+        "count": 24556
+      },
+      {
+        "name": "DOD",
+        "count": 1209326
+      },
+      {
+        "name": "DOC",
+        "count": 821
+      },
+      {
+        "name": "DOI",
+        "count": 2961
+      },
+      {
+        "name": "EPA",
+        "count": 4080
+      },
+      {
+        "name": "NASA",
+        "count": 7846
+      },
+      {
+        "name": "NRC",
+        "count": 256
+      },
+      {
+        "name": "CORP/CNCS",
+        "count": 82454
+      },
+      {
+        "name": "SSA",
+        "count": 588
+      },
+      {
+        "name": "HUD",
+        "count": 2019
+      },
+      {
+        "name": "PC",
+        "count": 15029
+      },
+      {
+        "name": "NSF",
+        "count": 56090
+      },
+      {
+        "name": "NARA",
+        "count": 69294
+      },
+      {
+        "name": "SBA",
+        "count": 202439
+      },
+      {
+        "name": "DOJ",
+        "count": 534400
+      },
+      {
+        "name": "DOL",
+        "count": 10453
+      },
+      {
+        "name": "DHS",
+        "count": 248337
+      },
+      {
+        "name": "ED",
+        "count": 1908
+      },
+      {
+        "name": "EIB/USEIB",
+        "count": 327
+      },
+      {
+        "name": "EAC",
+        "count": 10159
+      },
+      {
+        "name": "Gulf Restoration Council",
+        "count": 46
+      },
+      {
+        "name": "OMB",
+        "count": 67153
+      },
+      {
+        "name": "AFRH",
+        "count": 2101
+      },
+      {
+        "name": "IJC",
+        "count": 2036
+      },
+      {
+        "name": "USAGM",
+        "count": 38010
+      },
+      {
+        "name": "DFC",
+        "count": 13117
+      },
+      {
+        "name": "FSGB",
+        "count": 3247
+      },
+      {
+        "name": "IAF",
+        "count": 12487
+      },
+      {
+        "name": "IBWC",
+        "count": 10724
+      },
+      {
+        "name": "USIDCA",
+        "count": 4910
+      },
+      {
+        "name": "MCC",
+        "count": 5735
+      },
+      {
+        "name": "FLRA",
+        "count": 14869
+      },
+      {
+        "name": "Disputes Panel",
+        "count": 29738
+      },
+      {
+        "name": "FSLRB",
+        "count": 29738
+      },
+      {
+        "name": "USADF",
+        "count": 12506
+      },
+      {
+        "name": "JUSFC",
+        "count": 1818
+      },
+      {
+        "name": "USIP",
+        "count": 1835
+      },
+      {
+        "name": "USPS",
+        "count": 102387
+      },
+      {
+        "name": "PRC",
+        "count": 39044
+      },
+      {
+        "name": "PCLOB",
+        "count": 4475
+      },
+      {
+        "name": "FMC",
+        "count": 83240
+      },
+      {
+        "name": "FTC",
+        "count": 183551
+      },
+      {
+        "name": "CPSC",
+        "count": 234812
+      },
+      {
+        "name": "CFTC",
+        "count": 376334
+      },
+      {
+        "name": "SEC",
+        "count": 627952
+      },
+      {
+        "name": "OIC",
+        "count": 6418
+      },
+      {
+        "name": "CSOSA",
+        "count": 10328
+      },
+      {
+        "name": "NCPPCC",
+        "count": 2938
+      },
+      {
+        "name": "FEC",
+        "count": 103081
+      },
+      {
+        "name": "SSS",
+        "count": 19625
+      },
+      {
+        "name": "ODNI",
+        "count": 10633
+      },
+      {
+        "name": "NCTC",
+        "count": 10187
+      },
+      {
+        "name": "CIA",
+        "count": 15115
+      },
+      {
+        "name": "OMSN",
+        "count": 1837
+      },
+      {
+        "name": "OVPUS",
+        "count": 1621
+      },
+      {
+        "name": "CRC",
+        "count": 11658
+      },
+      {
+        "name": "OPM",
+        "count": 4708
+      },
+      {
+        "name": "DC",
+        "count": 2765
+      },
+      {
+        "name": "ARTS",
+        "count": 46878
+      },
+      {
+        "name": "LSC",
+        "count": 29464
+      },
+      {
+        "name": "NCLIS",
+        "count": 4648
+      },
+      {
+        "name": "HST",
+        "count": 4645
+      },
+      {
+        "name": "CFA",
+        "count": 5426
+      },
+      {
+        "name": "ARCTIC",
+        "count": 1824
+      },
+      {
+        "name": "JMMFF",
+        "count": 4994
+      },
+      {
+        "name": "ABMC",
+        "count": 4432
+      },
+      {
+        "name": "SI",
+        "count": 1341
+      },
+      {
+        "name": "LOC",
+        "count": 5694
+      },
+      {
+        "name": "ACHP",
+        "count": 15701
+      },
+      {
+        "name": "PADC",
+        "count": 17816
+      },
+      {
+        "name": "PT",
+        "count": 20968
+      },
+      {
+        "name": "ATBCB",
+        "count": 73652
+      },
+      {
+        "name": "OCNMT",
+        "count": 256
+      },
+      {
+        "name": "Udall Foundation",
+        "count": 3957
+      },
+      {
+        "name": "NCD",
+        "count": 1814
+      },
+      {
+        "name": "CPPBSD",
+        "count": 12700
+      },
+      {
+        "name": "GSA",
+        "count": 60148
+      },
+      {
+        "name": "FPRS",
+        "count": 6
+      },
+      {
+        "name": "FPMRS",
+        "count": 225366
+      },
+      {
+        "name": "FASC",
+        "count": 6
+      },
+      {
+        "name": "FTRS",
+        "count": 54934
+      },
+      {
+        "name": "ESGLB",
+        "count": 6466
+      },
+      {
+        "name": "EOGGLB",
+        "count": 6596
+      },
+      {
+        "name": "URMCC",
+        "count": 11381
+      }
+    ]
+  },
+  {
+    "year": "2015",
+    "agencies": [
+      {
+        "name": "EOP",
+        "count": 2066
+      },
+      {
+        "name": "ACFR",
+        "count": 6223
+      },
+      {
+        "name": "ACUS",
+        "count": 5547
+      },
+      {
+        "name": "NCEP",
+        "count": 10483
+      },
+      {
+        "name": "NCMNPS",
+        "count": 8676
+      },
+      {
+        "name": "NCPC",
+        "count": 10486
+      },
+      {
+        "name": "PCWHF",
+        "count": 9290
+      }
+    ]
+  }
+]
