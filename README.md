@@ -19,7 +19,7 @@ This project is all about data analysis, powered by the publicly available eCFR 
 
 ### 1. Data Source: The eCFR API (and a bit of API wrangling)
 
-Firstly thakns to [eCFR API](https://www.ecfr.gov/developers/documentation/api/v1).  This API provides access to the wealth of data within the Electronic Code of Federal Regulations. 
+Firstly thanks to [eCFR API](https://www.ecfr.gov/developers/documentation/api/v1).  This API provides access to the wealth of data within the Electronic Code of Federal Regulations. 
 
 Initially, figuring out how to effectively navigate this API felt like trying to find your way through a regulatory maze itself!  But after some... let's just say, *painstaking* effort, the project was set up to pull the necessary information.
 
