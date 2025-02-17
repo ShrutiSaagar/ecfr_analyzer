@@ -65,12 +65,12 @@ The final stage was to aggregate the processed data and present it in a way that
 
 ## Getting Started (Running Locally)
 
-Want to explore the data and visualizations yourself? Here's how to get started:
+**Backend:** The python files to queue, process and fetch data can be run individually provided the configurations are set in your .env file. Or you can choose to run them by creating different Dockerfiles for them. I've used Postgres DB and the corresponding connection strings, please change as needed.
 
-1. **Clone the repository:**  You'll find the code and data in the webpage folder.
-2. **Run a local server:**  You'll need a simple web server to serve the HTML and data files.  Python's built-in `http.server` is a quick option: `python -m http.server` in the project directory.
-3. **Open in your browser:**  Navigate to `http://localhost:8000` (or the address shown in your terminal) in your web browser.
-4. **Explore the data:** The data used for visualization (as of February 15th) is included in the repository alongside the webpage.  You can start exploring the trends right away!
+Frontend: Want to explore the data and visualizations yourself? Here's how to get started:
+
+1. **Run a local server:**  You'll need a simple web server to serve the HTML and data files in the webpage folder.  Python's built-in `http.server` is a quick option: `python -m http.server` in the project directory.
+2. **Explore the data:** The data used for visualization (as of February 15th) is included in the repository alongside the webpage.  You can start exploring the trends right away!
 
 ## Code and Data Notes
 
