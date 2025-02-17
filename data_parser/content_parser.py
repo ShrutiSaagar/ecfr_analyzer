@@ -63,9 +63,6 @@ class TextProcessor:
                             # print(f"Processing element with TYPE: {type_c}, N: {n_value}") # Debug print
                             if n_value in value_sets[type_c]:
                                 text_content = self.get_element_full_text(element)
-                                # print('full text')
-                                # print(len(text_content))
-                                # print(text_content[:200])
                                 result[type_c][n_value] = text_content.strip()
 
         except ET.ParseError as e:
@@ -95,51 +92,6 @@ class TextProcessor:
         tail = element.tail if element.tail else "" # Get the element's tail text (text after closing tag)
         return text + tail
 
-    async def aggregate_word_counts(self, text_content: str) -> Dict[str, int]:
-        """
-        Aggregates the counts of meaningful words from a text string,
-        excluding filler words, performing lemmatization, and removing punctuation.
-        Removes unnecessary new lines from the text before processing.
-
-        Args:
-            text_content: The input text string.
-
-        Returns:
-            A dictionary where keys are lemmatized meaningful words and values are their counts.
-        """
-        if not text_content:
-            return {}
-
-        # 0. Remove unnecessary new lines
-        text_content = text_content.replace('\n', ' ')
-
-        # 1. Lowercasing
-        text_content = text_content.lower()
-        print('text_content')
-        print(text_content)
-        # 2. Remove punctuation
-        text_content = text_content.translate(str.maketrans('', '', string.punctuation))
-        print(text_content)
-
-        # 3. Tokenization (split into words)
-        words = text_content.split()
-        print("words")
-        print(words)
-        # 4. Stop word removal
-        filtered_words = [word for word in words if word not in self.stop_words] # Use instance's stop_words
-
-        # 5. Lemmatization
-        lemma_words = [self.lemmatizer.lemmatize(word) for word in filtered_words] # Use instance's lemmatizer
-        print('lemma_words')
-        print(lemma_words)
-        
-        # 6. Count word frequencies
-        word_counts = Counter(lemma_words)
-        print('word_counts')
-        print(word_counts)
-        return dict(word_counts)
-
-
     async def aggregate_word_counts_stemming_numeric_filter(self, text_content: str) -> Dict[str, int]: #tuple[Dict[str, int], Dict[str, str]]:
         """
         Aggregates word counts using stemming and filters out numeric and hyphenated numeric words.
@@ -164,20 +116,40 @@ class TextProcessor:
                 current_word = punctuation_removed_word
 
             if current_word and current_word not in self.stop_words:
-                # --- Stemming instead of Lemmatization ---
                 stemmed_word = self.stemmer.stem(current_word) # Apply stemming
                 if stemmed_word != current_word:
                     self.word_transformation_map[stemmed_word] = current_word # Map stemmed word to word before stemming
                     current_word = stemmed_word
 
                 if current_word:
-                    # --- Efficient Numeric and Hyphenated Number Filter ---
-                    if not self.is_numeric_string(current_word) and len(current_word) > 3: # Filter numeric and hyphenated numbers
+                    if not self.is_numeric_string(current_word) and len(current_word) > 3:
                         processed_words.append(current_word)
 
         word_counts = Counter(processed_words)
         filtered_word_counts = dict(word_counts)
+        try:
+            with open('word_transformation_map.json', 'r') as file:
+                existing_map = json.load(file)
+                for key, value in existing_map.items():
+                    if key in self.word_transformation_map:
+                        if isinstance(self.word_transformation_map[key], list):
+                            # Convert value to a list if it's not already
+                            value_list = value if isinstance(value, list) else [value]
+                            # Append only new values
+                            self.word_transformation_map[key].extend([v for v in value_list if v not in self.word_transformation_map[key]])
+                        else:
+                            # If the current value is not a list, convert it to a list and append new values
+                            current_value = [self.word_transformation_map[key]]
+                            value_list = value if isinstance(value, list) else [value]
+                            self.word_transformation_map[key] = current_value + [v for v in value_list if v not in current_value]
+                    else:
+                        self.word_transformation_map[key] = value
+        except FileNotFoundError:
+            pass
 
+        # Save the updated word transformation map to disk
+        with open('word_transformation_map.json', 'w') as file:
+            json.dump(self.word_transformation_map, file, indent=4)
         return filtered_word_counts
 
     def is_numeric_string(self, word: str) -> bool:

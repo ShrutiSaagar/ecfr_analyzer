@@ -14,7 +14,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.exc import SQLAlchemyError
 from uuid import uuid4
 
-from ecfr_fetcher.app.fetcher import ECFRFetcher
+from ecfr_fetcher.fetcher import ECFRFetcher
 from models.models import VersionProcessingJobs, VersionWordCounts
 from content_parser import TextProcessor
 from config.base import settings 
@@ -25,18 +25,14 @@ load_dotenv()
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(threadName)s - %(message)s')
 
-class JobProcessor:
-    # def __init__(self, session: AsyncSession):
-    #     self.session = session
-    def __init__(self):
-        """
-        Initializes the JobProcessor with a database connection URL.
-        """
-        db_url = f"postgresql+asyncpg://{os.environ.get('DB_USER')}:{os.environ.get('DB_PASSWORD')}@{os.environ.get('DB_HOST')}:{os.environ.get('DB_PORT')}/{os.environ.get('DB_NAME')}"
+db_url = f"postgresql+asyncpg://{os.environ.get('DB_USER')}:{os.environ.get('DB_PASSWORD')}@{os.environ.get('DB_HOST')}:{os.environ.get('DB_PORT')}/{os.environ.get('DB_NAME')}"
+engine = create_async_engine(db_url)  # Create engine once per ECS task
+async_session_factory = async_sessionmaker(engine, expire_on_commit=False) # Create session factory once per ECS task
 
-        self.db_url = db_url
-        self._engine = create_async_engine(db_url) # Create engine once per processor instance
-        self.async_session_factory = async_sessionmaker(self._engine, expire_on_commit=False) # Session factory
+
+class JobProcessor:
+    def __init__(self, session_factory: async_sessionmaker): # Accept session_factory
+        self.async_session_factory = session_factory # Use the passed session factory
         title_path_map_file = os.path.join(os.path.dirname(__file__), 'title_path_map.json')
         with open(title_path_map_file, 'r') as file:
             self.title_path_map = json.load(file)
@@ -58,10 +54,9 @@ class JobProcessor:
                 stmt = text("""
                     SELECT *
                     FROM version_processing_jobs
-                    WHERE status = 'PENDING'
+                    WHERE status = 'ABC'
                     ORDER BY created_at
                     LIMIT :batch_size
-                    FOR UPDATE SKIP LOCKED
                 """).bindparams(batch_size=batch_size)
 
                 result = await session.execute(stmt)
@@ -211,7 +206,7 @@ class JobProcessor:
         """
         logging.info(f"Job processor started.")
         while True:
-            jobs = await self.fetch_jobs(20) # Fetch a batch of jobs
+            jobs = await self.fetch_jobs(10) # Fetch a batch of jobs
             if jobs:
                 for job in jobs:
                     await self.process_job(job)
@@ -221,16 +216,10 @@ class JobProcessor:
 
 
 async def run_multiple_processors(num_processors: int):
-    """
-    Runs multiple job processors concurrently using asyncio.gather.
-    """
-    # db_url = settings.DATABASE_URL # Use your database URL from settings
-    # session = get_db()
-    processors = [JobProcessor() for _ in range(num_processors)]
+    processors = [JobProcessor(async_session_factory) for _ in range(num_processors)] # Pass session_factory
     tasks = [processor.run_processor_loop() for processor in processors]
     logging.info(f"Running {num_processors} job processors.")
-    await asyncio.gather(*tasks) # Run all processors concurrently
-
+    await asyncio.gather(*tasks)
 
 async def main():
     """

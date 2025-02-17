@@ -46,7 +46,7 @@ class DataProcessor:
                         # print('doc')
                         # print(doc)
                         title = doc.get("title")
-                        if title in {7, 50, 12, 47, 49, 21, 48}:
+                        if title in { 7, 50 } : #12, 47, 49, 21, 48}: #7, 50 - lastly
                             titles_set.add(title)
                         chapter = doc.get("chapter")
                         logging.info(f"Title: {title}, Chapter: {chapter}")

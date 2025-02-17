@@ -9,7 +9,7 @@ class ECFRFetcher:
     def __init__(self, base_url: str):
         self.base_url = base_url
         # self.client = httpx.AsyncClient()
-        self.client = httpx.AsyncClient(timeout=60)
+        self.client = httpx.AsyncClient(timeout=900)
     
     async def fetch_agencies(self) -> dict:
         response = await self.client.get(f"{self.base_url}/admin/v1/agencies.json")
