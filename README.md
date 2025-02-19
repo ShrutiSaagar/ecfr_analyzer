@@ -82,6 +82,8 @@ Frontend: Want to explore the data and visualizations yourself? Here's how to ge
 * The word count data in 2021-23 went a bit down during covid and picked back up, sadly the lawmakers are back to make more troublesome laws I guess. Laws are needed but we know it is no longer a law when there are reports saying Chicago city is planning to reduce the speed limit because they aren't getting enough money in fines!
 * The webpage itself is pretty simple and put together hurriedly, it is hosted on my site http://shrutisaagar.com/ecfr/index.html . Feel free to check it out but please don't do intrusion testing or start DDOSing it because I'm a poor dev. Please forgive the shortcuts and bypasses in the html, js and css parts of the webpage.
 
+Adding the link to the Sheets doc showing the background calculations to order the processing and understanding the scale of data: https://docs.google.com/spreadsheets/d/1zvhDDRsrPfa9bzUXl8d4sl7EPxoDVG7fMATinQ0xBSo/edit?usp=sharing .
+
 ##  Contribute and Connect
 
 Feel free to explore the code and data!  Any feedback, comments, or suggestions are very welcome.  I'm also happy to discuss my learnings and findings in more detail if you find this project interesting or useful.
